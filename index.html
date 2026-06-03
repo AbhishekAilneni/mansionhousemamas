@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mansion House Mamas | Fear The Mamas</title>
+    <meta name="description" content="Mansion House Mamas Cricket Club — Apex, North Carolina. CCC Spring 2026. Fear The Mamas.">
+    <meta property="og:title" content="Mansion House Mamas | Fear The Mamas">
+    <meta property="og:description" content="Official website of Mansion House Mamas Cricket Club. CCC Spring 2026, Apex NC.">
+    <meta property="og:image" content="assets/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mansionhousemamas.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- PAGE LOADER -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo"><img src="assets/logo.png" alt="MHM"></div>
+        <div class="loader-text">FEAR THE MAMAS</div>
+        <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+
     <!-- SCROLL PROGRESS BAR -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
@@ -15,7 +31,7 @@
         <div class="nav-logo"><img src="assets/logo.png" alt="MHM Logo" class="nav-logo-img">MHM</div>
         <div class="nav-links" id="nav">
             <a href="#home">Home</a><a href="#squad">Squad</a><a href="#fixtures">Matches</a>
-            <a href="#rankings">Rankings</a><a href="#charts">Performance</a><a href="#stats">Stats</a><a href="#news">News</a><a href="#gallery">Gallery</a>
+            <a href="#rankings">Rankings</a><a href="#charts">Performance</a><a href="#stats">Stats</a><a href="#news">News</a><a href="#gallery">Highlights</a>
             <a href="https://cricclubs.com/CarolinaCricketChampionship/viewTeam.do?teamId=283&league=23&clubId=1093111" target="_blank">Live Scores ↗</a>
         </div>
         <a href="#join" class="nav-join">Join Squad</a>
@@ -96,6 +112,7 @@
             <div class="squad-card">
                 <div class="sc-front">
                     <div class="sc-number">03</div>
+                    <div class="sc-role-badge" style="background:gold;color:#000;">⭐ MOM</div>
                     <div class="sc-img"><img src="assets/players/Sai Kumar Kesana.jpeg" alt="Sai Kumar Kesana"></div>
                     <div class="sc-info"><span class="sc-pos">BATTER</span><span class="sc-name">SAI KUMAR<br>KESANA</span></div>
                 </div>
@@ -120,6 +137,7 @@
             <div class="squad-card">
                 <div class="sc-front">
                     <div class="sc-number">04</div>
+                    <div class="sc-role-badge" style="background:gold;color:#000;">⭐ MOM</div>
                     <div class="sc-img"><img src="assets/players/Karthik Sagar.jpeg" alt="Karthik Sagar"></div>
                     <div class="sc-info"><span class="sc-pos">ALL-ROUNDER</span><span class="sc-name">KARTHIK<br>SAGAR</span></div>
                 </div>
@@ -301,6 +319,7 @@
                 <div class="fix-badge">NEXT</div>
                 <div class="fix-teams"><span class="fix-home">MH MAMAS</span><span class="fix-vs">VS</span><span class="fix-away">AUBURN SPARTANS</span></div>
                 <div class="fix-meta">SAT, JUN 6, 2026 • 9:30 AM • RTP2</div>
+                <div class="countdown" id="matchCountdown"></div>
             </div>
             <div class="fix result win">
                 <div class="fix-badge">WON</div>
@@ -660,14 +679,14 @@
 
     <!-- GALLERY -->
     <section id="gallery" class="section section-dark">
-        <h2 class="sec-title">GALLERY</h2>
+        <h2 class="sec-title">HIGHLIGHTS</h2>
         <p class="sec-sub">Match Highlights • <a href="https://www.youtube.com/@Team-MHM-cricket" target="_blank" style="color:var(--fire);text-decoration:none;">Subscribe on YouTube ↗</a></p>
         <div class="video-grid">
-            <div class="video-item big"><iframe src="https://www.youtube.com/embed/OTpZItwAql4" title="MHM Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            <div class="video-item"><iframe src="https://www.youtube.com/embed/hvJhv6ZecPU" title="MHM Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            <div class="video-item"><iframe src="https://www.youtube.com/embed/ZoOdGNJGoOE" title="MHM Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            <div class="video-item"><iframe src="https://www.youtube.com/embed/ivyYc5Ww3NY" title="MHM Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            <div class="video-item"><iframe src="https://www.youtube.com/embed/LzfJdyMW3K0" title="MHM Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="video-item big"><iframe src="https://www.youtube.com/embed/OTpZItwAql4" title="MHM Highlights" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="video-item"><iframe src="https://www.youtube.com/embed/hvJhv6ZecPU" title="MHM Highlights" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="video-item"><iframe src="https://www.youtube.com/embed/ZoOdGNJGoOE" title="MHM Highlights" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="video-item"><iframe src="https://www.youtube.com/embed/ivyYc5Ww3NY" title="MHM Highlights" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="video-item"><iframe src="https://www.youtube.com/embed/LzfJdyMW3K0" title="MHM Highlights" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         </div>
     </section>
 
@@ -720,6 +739,29 @@
     </div>
 
     <script>
+    // Page loader
+    window.addEventListener('load',()=>{
+        const loader=document.getElementById('pageLoader');
+        setTimeout(()=>{loader.classList.add('hidden');setTimeout(()=>loader.remove(),500);},1200);
+    });
+
+    // Match countdown timer
+    function updateCountdown(){
+        const matchDate=new Date('2026-06-06T09:30:00-04:00');
+        const now=new Date();
+        const diff=matchDate-now;
+        const el=document.getElementById('matchCountdown');
+        if(!el)return;
+        if(diff<=0){el.innerHTML='<span class="cd-label">MATCH DAY!</span>';return;}
+        const days=Math.floor(diff/(1000*60*60*24));
+        const hrs=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+        const mins=Math.floor((diff%(1000*60*60))/(1000*60));
+        const secs=Math.floor((diff%(1000*60))/1000);
+        el.innerHTML='<div class="cd-box"><span class="cd-num">'+days+'</span><span class="cd-label">DAYS</span></div><div class="cd-box"><span class="cd-num">'+hrs+'</span><span class="cd-label">HRS</span></div><div class="cd-box"><span class="cd-num">'+mins+'</span><span class="cd-label">MIN</span></div><div class="cd-box"><span class="cd-num">'+secs+'</span><span class="cd-label">SEC</span></div>';
+    }
+    updateCountdown();
+    setInterval(updateCountdown,1000);
+
     // Intersection Observer for scroll animations
     const o=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show')}),{threshold:0.08});
     document.querySelectorAll('.sbar,.squad-card,.player,.fix,.mile,.perf,.news-card,.gal-item,.rank-row:not(.hidden-rank),.tl-item').forEach(e=>o.observe(e));
