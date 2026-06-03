@@ -65,7 +65,7 @@
         <div class="section-glow section-glow-left"></div>
         <div class="section-glow section-glow-right"></div>
         <h2 class="sec-title">THE SQUAD</h2>
-        <p class="sec-sub">CCC Spring 2026 • 21 Players</p>
+        <p class="sec-sub">CCC Spring 2026 • 18 Players</p>
         <div class="squad-grid">
             <div class="squad-card">
                 <div class="sc-front">
@@ -299,7 +299,7 @@
         <div class="fixtures">
             <div class="fix upcoming">
                 <div class="fix-badge">NEXT</div>
-                <div class="fix-teams"><span class="fix-home">AUBURN SPARTANS</span><span class="fix-vs">VS</span><span class="fix-away">MH MAMAS</span></div>
+                <div class="fix-teams"><span class="fix-home">MH MAMAS</span><span class="fix-vs">VS</span><span class="fix-away">AUBURN SPARTANS</span></div>
                 <div class="fix-meta">SAT, JUN 6, 2026 • 9:30 AM • RTP2</div>
             </div>
             <div class="fix result win">
@@ -518,7 +518,7 @@
             <div class="rank-row hidden-rank negative" data-points="-10"><span class="rank-col rank-num">17</span><span class="rank-col rank-player">Rajiv Mallojjala</span><span class="rank-col">2</span><span class="rank-col">-10</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col rank-total">-10</span></div>
             <div class="rank-row hidden-rank negative" data-points="-39"><span class="rank-col rank-num">18</span><span class="rank-col rank-player">Ashwin Kumar Boinala</span><span class="rank-col">3</span><span class="rank-col">-9</span><span class="rank-col">-30</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col rank-total">-39</span></div>
         </div>
-        <button class="btn-show-all" id="showAllRanks" onclick="document.querySelectorAll('.hidden-rank').forEach(r=>r.classList.toggle('hidden-rank'));this.textContent=this.textContent.includes('Show')?'Show Less':'Show All 18 Players'">Show All 18 Players</button>
+        <button class="btn-show-all" id="showAllRanks" onclick="document.querySelectorAll('.rank-row.hidden-rank').forEach(r=>{r.classList.remove('hidden-rank');r.classList.add('show')});this.textContent=this.textContent.includes('Show All')?'Show Less':'Show All 18 Players';if(this.textContent==='Show All 18 Players'){document.querySelectorAll('.rank-row').forEach((r,i)=>{if(i>=10)r.classList.add('hidden-rank')})}">Show All 18 Players</button>
     </section>
 
     <!-- STATS -->
@@ -530,7 +530,7 @@
         <h2 class="sec-title">TOP PERFORMERS</h2>
         <div class="performers">
             <div class="perf"><div class="perf-icon">🏏</div><div class="perf-cat">TOP SCORER</div><div class="perf-name">Sai Kumar Kesana</div><div class="perf-val">108 runs</div></div>
-            <div class="perf"><div class="perf-icon">🎯</div><div class="perf-cat">TOP WICKETS</div><div class="perf-name">Karan Sagar Vishwanath</div><div class="perf-val">5 wkts</div></div>
+            <div class="perf"><div class="perf-icon">🔴</div><div class="perf-cat">TOP WICKETS</div><div class="perf-name">Karan Sagar Vishwanath</div><div class="perf-val">5 wkts</div></div>
             <div class="perf"><div class="perf-icon">⚡</div><div class="perf-cat">BEST ECONOMY</div><div class="perf-name">Ashok Kumar Attluri</div><div class="perf-val">4.50</div></div>
             <div class="perf"><div class="perf-icon">💥</div><div class="perf-cat">BEST SR (BAT)</div><div class="perf-name">Ashok Kumar Attluri</div><div class="perf-val">133.33</div></div>
         </div>
@@ -689,8 +689,8 @@
     <footer>
         <div class="foot-top">
             <div class="foot-brand"><img src="assets/logo.png" alt="MHM Logo" class="foot-logo"><p>Mansion House Mamas CC<br>Apex, North Carolina</p></div>
-            <div class="foot-links"><a href="#squad">Squad</a><a href="#fixtures">Matches</a><a href="#rankings">Rankings</a><a href="#stats">Stats</a><a href="#news">News</a><a href="#join">Join</a></div>
-            <div class="foot-contact"><p>📍 Apex, NC</p><p>✉️ mansionhousemamas@gmail.com</p></div>
+            <div class="foot-links"><a href="#squad">Squad</a><a href="#fixtures">Matches</a><a href="#rankings">Rankings</a><a href="#stats">Stats</a><a href="#news">News</a><a href="#join">Join</a><a href="https://www.youtube.com/@Team-MHM-cricket" target="_blank">YouTube ↗</a></div>
+            <div class="foot-contact"><p>📍 Apex, NC</p><p>✉️ mansionhousemamas@gmail.com</p><p>▶️ <a href="https://www.youtube.com/@Team-MHM-cricket" target="_blank" style="color:var(--fire);text-decoration:none;">YouTube Channel</a></p></div>
         </div>
         <div class="foot-bar">© 2026 Mansion House Mamas Cricket Club • Fear The Mamas<br><span class="designed-by">Site designed by AB</span></div>
     </footer>
