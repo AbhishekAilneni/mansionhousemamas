@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mansion House Mamas | Fear The Mamas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- SCROLL PROGRESS BAR -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <nav>
+        <div class="nav-logo"><img src="assets/logo.png" alt="MHM Logo" class="nav-logo-img">MHM</div>
+        <div class="nav-links" id="nav">
+            <a href="#home">Home</a><a href="#squad">Squad</a><a href="#fixtures">Matches</a>
+            <a href="#rankings">Rankings</a><a href="#charts">Performance</a><a href="#stats">Stats</a><a href="#news">News</a><a href="#gallery">Gallery</a>
+            <a href="https://cricclubs.com/CarolinaCricketChampionship/viewTeam.do?teamId=283&league=23&clubId=1093111" target="_blank">Live Scores ↗</a>
+        </div>
+        <a href="#join" class="nav-join">Join Squad</a>
+        <button class="burger" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    </nav>
+
+    <!-- HERO -->
+    <svg style="position:absolute;width:0;height:0;">
+        <filter id="liquid-filter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" seed="2" result="noise">
+                <animate attributeName="baseFrequency" values="0.015;0.02;0.015" dur="8s" repeatCount="indefinite"/>
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="18" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+    </svg>
+    <section id="home" class="hero">
+        <div class="fire-bg"></div>
+        <div class="hero-glow hero-glow-left"></div>
+        <div class="hero-glow hero-glow-right"></div>
+        <div class="hero-logo-bg hero-logo-left" data-parallax="0.15"></div>
+        <div class="hero-logo-bg hero-logo-right" data-parallax="0.15"></div>
+        <div class="liquid-overlay"></div>
+        <div class="ember-particles" id="embers"></div>
+        <div class="hero-inner">
+            <p class="hero-league">CAROLINA CRICKET CHAMPIONSHIP • SPRING 2026</p>
+            <h1 class="hero-title">FEAR<br>THE<br>MAMAS</h1>
+            <p class="hero-club">MANSION HOUSE MAMAS CRICKET CLUB</p>
+            <p class="hero-loc">APEX, NORTH CAROLINA</p>
+            <a href="#fixtures" class="btn-fire">Next Match →</a>
+        </div>
+        <div class="hero-scroll">SCROLL ↓</div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section class="stats-bar">
+        <div class="sbar"><span data-count="5">0</span>MATCHES</div>
+        <div class="sbar"><span data-count="3">0</span>WINS</div>
+        <div class="sbar"><span data-count="507">0</span>RUNS</div>
+        <div class="sbar"><span data-count="2">0</span>LOSSES</div>
+        <div class="sbar accent"><span data-count="60">0</span>WIN RATE</div>
+    </section>
+
+    <!-- SQUAD -->
+    <section id="squad" class="section section-dark section-with-logos">
+        <div class="section-logo section-logo-left" data-parallax="0.1"></div>
+        <div class="section-logo section-logo-right" data-parallax="0.1"></div>
+        <div class="section-glow section-glow-left"></div>
+        <div class="section-glow section-glow-right"></div>
+        <h2 class="sec-title">THE SQUAD</h2>
+        <p class="sec-sub">CCC Spring 2026 • 21 Players</p>
+        <div class="squad-grid">
+            <div class="squad-card">
+                <div class="sc-front">
+                    <div class="sc-number">01</div>
+                    <div class="sc-role-badge">CAPTAIN</div>
+                    <div class="sc-img"><img src="assets/players/Ashok.jpeg" alt="Ashok Kumar Attluri"></div>
+                    <div class="sc-info"><span class="sc-pos">ALL-ROUNDER</span><span class="sc-name">ASHOK<br>ATTLURI</span></div>
+                </div>
+                <div class="sc-back">
+                    <div class="sc-back-name">Ashok Kumar Attluri</div><div class="sc-back-pos">MHM • CCC Spring 2026</div>
+                    <div class="sc-stats-grid"><div class="sc-stat"><span>12</span>RUNS</div><div class="sc-stat"><span>133</span>SR</div><div class="sc-stat"><span>4</span>WKTS</div><div class="sc-stat"><span>4.50</span>ECON</div></div>
+                    <div class="sc-rank">Rank #3 • 253 pts</div><a class="sc-readmore">Read More →</a>
+                </div>
+            </div>
+            <div class="squad-card">
+                <div class="sc-front">
+                    <div class="sc-number">02</div>
+                    <div class="sc-role-badge">VICE CAPTAIN</div>
+                    <div class="sc-img"><img src="assets/players/Rohith.jpeg" alt="Rohith Aitharaju"></div>
+                    <div class="sc-info"><span class="sc-pos">ALL-ROUNDER</span><span class="sc-name">ROHITH<br>AITHARAJU</span></div>
+                </div>
+                <div class="sc-back">
+                    <div class="sc-back-name">Rohith Aitharaju</div><div class="sc-back-pos">MHM • CCC Spring 2026</div>
+                    <div class="sc-stats-grid"><div class="sc-stat"><span>4</span>RUNS</div><div class="sc-stat"><span>1</span>WKTS</div><div class="sc-stat"><span>10.33</span>ECON</div><div class="sc-stat"><span>2</span>MAT</div></div>
+                    <div class="sc-rank">Rank #16 • 14 pts</div><a class="sc-readmore">Read More →</a>
+                </div>
+            </div>
+            <div class="squad-card">
+                <div class="sc-front">
+                    <div class="sc-number">03</div>
+                    <div class="sc-img"><img src="assets/players/Sai Kumar Kesana.jpeg" alt="Sai Kumar Kesana"></div>
+                    <div class="sc-info"><span class="sc-pos">BATTER</span><span class="sc-name">SAI KUMAR<br>KESANA</span></div>
+                </div>
+                <div class="sc-back">
+                    <div class="sc-back-name">Sai Kumar Kesana</div><div class="sc-back-pos">MHM • CCC Spring 2026</div>
+                    <div class="sc-stats-grid"><div class="sc-stat"><span>108</span>RUNS</div><div class="sc-stat"><span>36</span>AVG</div><div class="sc-stat"><span>45</span>HS</div><div class="sc-stat"><span>120</span>SR</div></div>
+                    <div class="sc-rank">Rank #2 • 325 pts • 1 MOM</div><a class="sc-readmore">Read More →</a>
+                </div>
+            </div>
+            <div class="squad-card">
+                <div class="sc-front">
+                    <div class="sc-number">11</div>
+                    <div class="sc-img"><img src="assets/players/Karan.jpeg" alt="Karan Sagar Vishwanath"></div>
+                    <div class="sc-info"><span class="sc-pos">ALL-ROUNDER</span><span class="sc-name">KARAN SAGAR<br>VISHWANATH</span></div>
+                </div>
+                <div class="sc-back">
+                    <div class="sc-back-name">Karan Sagar Vishwanath</div><div class="sc-back-pos">MHM • CCC Spring 2026</div>
+                    <div class="sc-stats-grid"><div class="sc-stat"><span>66</span>RUNS</div><div class="sc-stat"><span>120</span>SR</div><div class="sc-stat"><span>5</span>WKTS</div><div class="sc-stat"><span>5.73</span>ECON</div></div>
+                    <div class="sc-rank">Rank #1 • 346 pts 🥇</div><a class="sc-readmore">Read More →</a>
+                </div>
+            </div>
+            <div class="squad-card">
+                <div class="sc-front">
+                    <div class="sc-number">04</div>
+                    <div class="sc-img"><img src="assets/players/Karthik Sagar.jpeg" alt="Karthik Sagar"></div>
+                    <div class="sc-info"><span class="sc-pos">ALL-ROUNDER</span><span class="sc-name">KARTHIK<br>SAGAR</span></div>
+                </div>
+                <div class="sc-back">
+                    <div class="sc-back-name">Karthik Sagar</div><div class="sc-back-pos">MHM • CCC Spring 2026</div>
+                    <div class="sc-stats-grid"><div class="sc-stat"><span>50</span>RUNS</div><div class="sc-stat"><span>31</span>HS</div><div class="sc-stat"><span>109</span>SR</div><div class="sc-stat"><span>4</span>MAT</div></div>
+                    <div class="sc-rank">Rank #5 • 182 pts • 1 MOM</div><a class="sc-readmore">Read More →</a>
+                </div>
+            </div>
+
+            <div class="squad-card">
+                <div class="sc-front">
+                    <div class="sc-number">05</div>
+                    <div class="sc-img">👤</div>
+                    <div class="sc-info"><span class="sc-pos">BATTER</span><span class="sc-name">MAHESH<br>M</span></div>
+                </div>
+                <div class="sc-back">
+                    <div class="sc-back-name">Mahesh M</div><div class="sc-back-pos">MHM • CCC Spring 2026</div>
+                    <div class="sc-stats-grid"><div class="sc-stat"><span>45</span>RUNS</div><div class="sc-stat"><span>22.5</span>AVG</div><div class="sc-stat"><span>45</span>HS</div><div class="sc-stat"><span>2</span>MAT</div></div>
+                    <div class="sc-rank">Rank #11 • 92 pts</div><a class="sc-readmore">Read More →</a>
+                </div>
+            </div>
+            <div class="squad-card">
+                <div class="sc-front">
+                    <div class="sc-number">06</div>
+                    <div class="sc-img">👤</div>
+                    <div class="sc-info"><span class="sc-pos">ALL-ROUNDER</span><span class="sc-name">ABHISHEK<br>AILNENI</span></div>
+                </div>
+                <div class="sc-back">
+                    <div class="sc-back-name">Abhishek Ailneni</div><div class="sc-back-pos">MHM • CCC Spring 2026</div>
+                    <div class="sc-stats-grid"><div class="sc-stat"><span>37</span>RUNS</div><div class="sc-stat"><span>123</span>SR</div><div class="sc-stat"><span>0</span>WKTS</div><div class="sc-stat"><span>4</span>MAT</div></div>
+                    <div class="sc-rank">Rank #7 • 124 pts</div><a class="sc-readmore">Read More →</a>
+                </div>
+            </div>
+            <div class="squad-card">
+                <div class="sc-front">
+                    <div class="sc-number">07</div>
+                    <div class="sc-img"><img src="assets/players/Sai Krishna Bobba.jpeg" alt="Sai Krishna Bobba"></div>
+                    <div class="sc-info"><span class="sc-pos">ALL-ROUNDER</span><span class="sc-name">SAI KRISHNA<br>BOBBA</span></div>
+                </div>
+                <div class="sc-back">
+                    <div class="sc-back-name">Sai Krishna Bobba</div><div class="sc-back-pos">MHM • CCC Spring 2026</div>
+                    <div class="sc-stats-grid"><div class="sc-stat"><span>28</span>RUNS</div><div class="sc-stat"><span>2</span>WKTS</div><div class="sc-stat"><span>5.00</span>ECON</div><div class="sc-stat"><span>5</span>MAT</div></div>
+                    <div class="sc-rank">Rank #9 • 101 pts</div><a class="sc-readmore">Read More →</a>
+                </div>
+            </div>
+            <div class="squad-card">
+                <div class="sc-front">
+                    <div class="sc-number">08</div>
+                    <div class="sc-img"><img src="assets/players/Ganesh.webp" alt="Ganesh Jujjuru"></div>
+                    <div class="sc-info"><span class="sc-pos">ALL-ROUNDER</span><span class="sc-name">GANESH<br>JUJJURU</span></div>
+                </div>
+                <div class="sc-back">
+                    <div class="sc-back-name">Ganesh Jujjuru</div><div class="sc-back-pos">MHM • CCC Spring 2026</div>
+                    <div class="sc-stats-grid"><div class="sc-stat"><span>28</span>RUNS</div><div class="sc-stat"><span>4</span>WKTS</div><div class="sc-stat"><span>8.31</span>ECON</div><div class="sc-stat"><span>5</span>MAT</div></div>
+                    <div class="sc-rank">Rank #10 • 98 pts</div><a class="sc-readmore">Read More →</a>
+                </div>
+            </div>
+            <div class="squad-card">
+                <div class="sc-front">
+                    <div class="sc-number">09</div>
+                    <div class="sc-img"><img src="assets/players/Ayush.jpeg" alt="Ayush Gupta"></div>
+                    <div class="sc-info"><span class="sc-pos">BATTER</span><span class="sc-name">AYUSH<br>GUPTA</span></div>
+                </div>
+                <div class="sc-back">
+                    <div class="sc-back-name">Ayush Gupta</div><div class="sc-back-pos">MHM • CCC Spring 2026</div>
+                    <div class="sc-stats-grid"><div class="sc-stat"><span>27</span>RUNS</div><div class="sc-stat"><span>13.5</span>AVG</div><div class="sc-stat"><span>18</span>HS</div><div class="sc-stat"><span>3</span>MAT</div></div>
+                    <div class="sc-rank">Rank #8 • 120 pts</div><a class="sc-readmore">Read More →</a>
+                </div>
+            </div>
+            <div class="squad-card">
+                <div class="sc-front">
+                    <div class="sc-number">10</div>
+                    <div class="sc-img"><img src="assets/players/Kiran.webp" alt="Kiran Chamarthi"></div>
+                    <div class="sc-info"><span class="sc-pos">ALL-ROUNDER</span><span class="sc-name">KIRAN<br>CHAMARTHI</span></div>
+                </div>
+                <div class="sc-back">
+                    <div class="sc-back-name">Kiran Chamarthi</div><div class="sc-back-pos">MHM • CCC Spring 2026</div>
+                    <div class="sc-stats-grid"><div class="sc-stat"><span>16</span>RUNS</div><div class="sc-stat"><span>4</span>WKTS</div><div class="sc-stat"><span>5.50</span>ECON</div><div class="sc-stat"><span>3</span>MAT</div></div>
+                    <div class="sc-rank">Rank #4 • 198 pts</div><a class="sc-readmore">Read More →</a>
+                </div>
+            </div>
+            <div class="squad-card">
+                <div class="sc-front">
+                    <div class="sc-number">12</div>
+                    <div class="sc-img"><img src="assets/players/Piyush.jpeg" alt="Piyush Bhardwaj"></div>
+                    <div class="sc-info"><span class="sc-pos">BATTER</span><span class="sc-name">PIYUSH<br>BHARDWAJ</span></div>
+                </div>
+                <div class="sc-back">
+                    <div class="sc-back-name">Piyush Bhardwaj</div><div class="sc-back-pos">MHM • CCC Spring 2026</div>
+                    <div class="sc-stats-grid"><div class="sc-stat"><span>15</span>RUNS</div><div class="sc-stat"><span>75</span>SR</div><div class="sc-stat"><span>2</span>MAT</div><div class="sc-stat"><span>14</span>RANK</div></div>
+                    <div class="sc-rank">Rank #14 • 25 pts</div><a class="sc-readmore">Read More →</a>
+                </div>
+            </div>
+            <div class="squad-card">
+                <div class="sc-front">
+                    <div class="sc-number">13</div>
+                    <div class="sc-img"><img src="assets/players/Ajay.jpg" alt="Ajay Reddy Poreddy"></div>
+                    <div class="sc-info"><span class="sc-pos">ALL-ROUNDER</span><span class="sc-name">AJAY REDDY<br>POREDDY</span></div>
+                </div>
+                <div class="sc-back">
+                    <div class="sc-back-name">Ajay Reddy Poreddy</div><div class="sc-back-pos">MHM • CCC Spring 2026</div>
+                    <div class="sc-stats-grid"><div class="sc-stat"><span>9</span>RUNS</div><div class="sc-stat"><span>1</span>WKTS</div><div class="sc-stat"><span>5.78</span>ECON</div><div class="sc-stat"><span>3</span>MAT</div></div>
+                    <div class="sc-rank">Rank #12 • 60 pts</div><a class="sc-readmore">Read More →</a>
+                </div>
+            </div>
+            <div class="squad-card">
+                <div class="sc-front">
+                    <div class="sc-number">14</div>
+                    <div class="sc-img"><img src="assets/players/Kumar Karthik.webp" alt="Kumar Karthik"></div>
+                    <div class="sc-info"><span class="sc-pos">BOWLER</span><span class="sc-name">KUMAR<br>KARTHIK</span></div>
+                </div>
+                <div class="sc-back">
+                    <div class="sc-back-name">Kumar Karthik</div><div class="sc-back-pos">MHM • CCC Spring 2026</div>
+                    <div class="sc-stats-grid"><div class="sc-stat"><span>4</span>WKTS</div><div class="sc-stat"><span>6.50</span>ECON</div><div class="sc-stat"><span>1</span>MAIDEN</div><div class="sc-stat"><span>4</span>MAT</div></div>
+                    <div class="sc-rank">Rank #6 • 152 pts</div><a class="sc-readmore">Read More →</a>
+                </div>
+            </div>
+            <div class="squad-card">
+                <div class="sc-front">
+                    <div class="sc-number">15</div>
+                    <div class="sc-img"><img src="assets/players/Ashwin.jpeg" alt="Ashwin Kumar Boinala"></div>
+                    <div class="sc-info"><span class="sc-pos">BOWLER</span><span class="sc-name">ASHWIN<br>BOINALA</span></div>
+                </div>
+                <div class="sc-back">
+                    <div class="sc-back-name">Ashwin Kumar Boinala</div><div class="sc-back-pos">MHM • CCC Spring 2026</div>
+                    <div class="sc-stats-grid"><div class="sc-stat"><span>1</span>RUNS</div><div class="sc-stat"><span>0</span>WKTS</div><div class="sc-stat"><span>14.67</span>ECON</div><div class="sc-stat"><span>3</span>MAT</div></div>
+                    <div class="sc-rank">Rank #18 • -39 pts</div><a class="sc-readmore">Read More →</a>
+                </div>
+            </div>
+            <div class="squad-card">
+                <div class="sc-front">
+                    <div class="sc-number">16</div>
+                    <div class="sc-img"><img src="assets/players/Bharat.jpeg" alt="Bharat Choudhary"></div>
+                    <div class="sc-info"><span class="sc-pos">ALL-ROUNDER</span><span class="sc-name">BHARAT<br>CHOUDHARY</span></div>
+                </div>
+                <div class="sc-back">
+                    <div class="sc-back-name">Bharat Choudhary</div><div class="sc-back-pos">MHM • CCC Spring 2026</div>
+                    <div class="sc-stats-grid"><div class="sc-stat"><span>1</span>WKTS</div><div class="sc-stat"><span>5.67</span>ECON</div><div class="sc-stat"><span>1</span>MAT</div><div class="sc-stat"><span>13</span>RANK</div></div>
+                    <div class="sc-rank">Rank #13 • 40 pts</div><a class="sc-readmore">Read More →</a>
+                </div>
+            </div>
+            <div class="squad-card">
+                <div class="sc-front">
+                    <div class="sc-number">17</div>
+                    <div class="sc-img"><img src="assets/players/Aravind.webp" alt="Aravind Gampa"></div>
+                    <div class="sc-info"><span class="sc-pos">PLAYER</span><span class="sc-name">ARAVIND<br>GAMPA</span></div>
+                </div>
+                <div class="sc-back">
+                    <div class="sc-back-name">Aravind Gampa</div><div class="sc-back-pos">MHM • CCC Spring 2026</div>
+                    <div class="sc-stats-grid"><div class="sc-stat"><span>0</span>RUNS</div><div class="sc-stat"><span>0</span>WKTS</div><div class="sc-stat"><span>20</span>FIELD</div><div class="sc-stat"><span>1</span>MAT</div></div>
+                    <div class="sc-rank">Rank #15 • 20 pts</div><a class="sc-readmore">Read More →</a>
+                </div>
+            </div>
+            <div class="squad-card">
+                <div class="sc-front">
+                    <div class="sc-number">18</div>
+                    <div class="sc-img"><img src="assets/players/Rajiv.jpeg" alt="Rajiv Mallojjala"></div>
+                    <div class="sc-info"><span class="sc-pos">PLAYER</span><span class="sc-name">RAJIV<br>MALLOJJALA</span></div>
+                </div>
+                <div class="sc-back">
+                    <div class="sc-back-name">Rajiv Mallojjala</div><div class="sc-back-pos">MHM • CCC Spring 2026</div>
+                    <div class="sc-stats-grid"><div class="sc-stat"><span>0</span>RUNS</div><div class="sc-stat"><span>0</span>WKTS</div><div class="sc-stat"><span>0</span>FIELD</div><div class="sc-stat"><span>2</span>MAT</div></div>
+                    <div class="sc-rank">Rank #17 • -10 pts</div><a class="sc-readmore">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FIXTURES -->
+    <section id="fixtures" class="section section-dark section-with-logos">
+        <div class="section-logo section-logo-left" data-parallax="0.1"></div>
+        <div class="section-logo section-logo-right" data-parallax="0.1"></div>
+        <div class="section-glow section-glow-left"></div>
+        <div class="section-glow section-glow-right"></div>
+        <h2 class="sec-title">MATCHES</h2>
+        <div class="fixtures">
+            <div class="fix upcoming">
+                <div class="fix-badge">NEXT</div>
+                <div class="fix-teams"><span class="fix-home">AUBURN SPARTANS</span><span class="fix-vs">VS</span><span class="fix-away">MH MAMAS</span></div>
+                <div class="fix-meta">SAT, JUN 6, 2026 • 9:30 AM • RTP2</div>
+            </div>
+            <div class="fix result win">
+                <div class="fix-badge">WON</div>
+                <div class="fix-teams"><span class="fix-home">MH MAMAS <b>122/5</b></span><span class="fix-vs">VS</span><span class="fix-away">EVEREST COMMUNITY CLUB <b>83/8</b></span></div>
+                <div class="fix-meta">MAY 16, 2026 • Won by 39 Runs • 15 overs</div>
+            </div>
+            <div class="fix result loss">
+                <div class="fix-badge">LOST</div>
+                <div class="fix-teams"><span class="fix-home">MH MAMAS <b>101/8</b></span><span class="fix-vs">VS</span><span class="fix-away">NC TROJANS <b>102/6</b></span></div>
+                <div class="fix-meta">APR 19, 2026 • Lost by 4 Wickets • 15 overs</div>
+            </div>
+            <div class="fix result win">
+                <div class="fix-badge">WON</div>
+                <div class="fix-teams"><span class="fix-home">HIMALAYAN HAWKS <b>114/4</b></span><span class="fix-vs">VS</span><span class="fix-away">MH MAMAS <b>116/4</b></span></div>
+                <div class="fix-meta">APR 12, 2026 • Won by 6 Wickets • Chased in 13.3 overs</div>
+            </div>
+            <div class="fix result win">
+                <div class="fix-badge">WON</div>
+                <div class="fix-teams"><span class="fix-home">MH MAMAS <b>72/6</b></span><span class="fix-vs">VS</span><span class="fix-away">COMILLA VICTORIANS <b>71/10</b></span></div>
+                <div class="fix-meta">APR 4, 2026 • Won by 1 Run • Thriller!</div>
+            </div>
+            <div class="fix result loss">
+                <div class="fix-badge">LOST</div>
+                <div class="fix-teams"><span class="fix-home">MH MAMAS <b>96/10</b></span><span class="fix-vs">VS</span><span class="fix-away">WOLF GANG <b>97/2</b></span></div>
+                <div class="fix-meta">MAR 29, 2026 • Lost by 8 Wickets • 15 overs</div>
+            </div>
+        </div>
+        <h3 class="sec-sub" style="margin-top:40px; color:var(--fire);">UMPIRING DUTIES</h3>
+        <div class="fixtures">
+            <div class="fix upcoming">
+                <div class="fix-badge">UMPIRING</div>
+                <div class="fix-teams"><span class="fix-home">THUNDERS</span><span class="fix-vs">VS</span><span class="fix-away">BLASTERS</span></div>
+                <div class="fix-meta">SAT, JUN 7, 2026 • 7:00 AM • RTP2</div>
+            </div>
+            <div class="fix result">
+                <div class="fix-badge" style="color:var(--muted);">DONE</div>
+                <div class="fix-teams"><span class="fix-home">CAROLINA SUPER KINGS</span><span class="fix-vs">VS</span><span class="fix-away">NAUGHTY KHILADIS</span></div>
+                <div class="fix-meta">APR 12, 2026 • 9:30 AM • RTP2</div>
+            </div>
+            <div class="fix result">
+                <div class="fix-badge" style="color:var(--muted);">DONE</div>
+                <div class="fix-teams"><span class="fix-home">RDU ROCKERS</span><span class="fix-vs">VS</span><span class="fix-away">NAUGHTY KHILADIS</span></div>
+                <div class="fix-meta">APR 19, 2026 • 7:00 AM • RTP2</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MILESTONES -->
+    <section class="section milestones">
+        <h2 class="sec-title">MILESTONES</h2>
+        <div class="mile-grid">
+            <div class="mile"><span class="mile-num">122</span><span class="mile-label">Highest Team Score</span><span class="mile-desc">122/5 vs Everest Community Club, May 2026</span></div>
+            <div class="mile"><span class="mile-num">1 Run</span><span class="mile-label">Closest Win</span><span class="mile-desc">Defended 72 vs COMILLA Victorians — won by just 1 run!</span></div>
+            <div class="mile"><span class="mile-num">13.3</span><span class="mile-label">Fastest Chase (overs)</span><span class="mile-desc">Chased 115 vs Himalayan Hawks with 1.3 overs to spare</span></div>
+            <div class="mile"><span class="mile-num">3</span><span class="mile-label">Wins in 5</span><span class="mile-desc">60% win rate in CCC Spring 2026 season</span></div>
+        </div>
+    </section>
+
+    <!-- SEASON TIMELINE -->
+    <section class="section section-dark" id="timeline">
+        <h2 class="sec-title">SEASON JOURNEY</h2>
+        <p class="sec-sub">CCC Spring 2026 • Match by Match</p>
+        <div class="timeline">
+            <div class="tl-line"></div>
+            <div class="tl-item win">
+                <div class="tl-dot"></div>
+                <div class="tl-date">MAR 29</div>
+                <div class="tl-card">
+                    <div class="tl-result">LOSS</div>
+                    <div class="tl-detail">vs Wolf Gang • Lost by 8 Wickets</div>
+                    <div class="tl-score">MHM 96/10 — WG 97/2</div>
+                </div>
+            </div>
+            <div class="tl-item win">
+                <div class="tl-dot"></div>
+                <div class="tl-date">APR 4</div>
+                <div class="tl-card">
+                    <div class="tl-result tl-win">WIN</div>
+                    <div class="tl-detail">vs COMILLA Victorians • Won by 1 Run 🔥</div>
+                    <div class="tl-score">MHM 72/6 — CV 71/10</div>
+                </div>
+            </div>
+            <div class="tl-item win">
+                <div class="tl-dot"></div>
+                <div class="tl-date">APR 12</div>
+                <div class="tl-card">
+                    <div class="tl-result tl-win">WIN</div>
+                    <div class="tl-detail">vs Himalayan Hawks • Won by 6 Wickets</div>
+                    <div class="tl-score">HH 114/4 — MHM 116/4 (13.3 ov)</div>
+                </div>
+            </div>
+            <div class="tl-item win">
+                <div class="tl-dot"></div>
+                <div class="tl-date">APR 19</div>
+                <div class="tl-card">
+                    <div class="tl-result">LOSS</div>
+                    <div class="tl-detail">vs NC Trojans • Lost by 4 Wickets</div>
+                    <div class="tl-score">MHM 101/8 — NCT 102/6</div>
+                </div>
+            </div>
+            <div class="tl-item win">
+                <div class="tl-dot"></div>
+                <div class="tl-date">MAY 16</div>
+                <div class="tl-card">
+                    <div class="tl-result tl-win">WIN</div>
+                    <div class="tl-detail">vs Everest Community Club • Won by 39 Runs</div>
+                    <div class="tl-score">MHM 122/5 — ECC 83/8</div>
+                </div>
+            </div>
+            <div class="tl-item upcoming">
+                <div class="tl-dot"></div>
+                <div class="tl-date">JUN 6</div>
+                <div class="tl-card">
+                    <div class="tl-result tl-next">NEXT</div>
+                    <div class="tl-detail">vs Auburn Spartans • RTP2 • 9:30 AM</div>
+                    <div class="tl-score">Game Day — Fear The Mamas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERFORMANCE CHARTS -->
+    <section class="section" id="charts">
+        <h2 class="sec-title">PERFORMANCE</h2>
+        <p class="sec-sub">Season Trends & Visual Breakdown</p>
+
+        <div class="charts-grid">
+            <!-- Runs per match bar chart -->
+            <div class="chart-box">
+                <h3 class="chart-title">RUNS PER MATCH</h3>
+                <div class="bar-chart">
+                    <div class="bar-row"><span class="bar-label">vs Wolf Gang</span><div class="bar-track"><div class="bar-fill" style="--bar-pct:78%"><span>96</span></div></div></div>
+                    <div class="bar-row"><span class="bar-label">vs COMILLA</span><div class="bar-track"><div class="bar-fill" style="--bar-pct:59%"><span>72</span></div></div></div>
+                    <div class="bar-row"><span class="bar-label">vs Hawks</span><div class="bar-track"><div class="bar-fill" style="--bar-pct:95%"><span>116</span></div></div></div>
+                    <div class="bar-row"><span class="bar-label">vs Trojans</span><div class="bar-track"><div class="bar-fill" style="--bar-pct:83%"><span>101</span></div></div></div>
+                    <div class="bar-row"><span class="bar-label">vs Everest</span><div class="bar-track"><div class="bar-fill" style="--bar-pct:100%"><span>122</span></div></div></div>
+                </div>
+            </div>
+
+            <!-- Win/Loss streak -->
+            <div class="chart-box">
+                <h3 class="chart-title">WIN/LOSS STREAK</h3>
+                <div class="streak-chart">
+                    <div class="streak-item loss"><span class="streak-icon">✗</span><span class="streak-match">M1</span></div>
+                    <div class="streak-item win"><span class="streak-icon">✓</span><span class="streak-match">M2</span></div>
+                    <div class="streak-item win"><span class="streak-icon">✓</span><span class="streak-match">M3</span></div>
+                    <div class="streak-item loss"><span class="streak-icon">✗</span><span class="streak-match">M4</span></div>
+                    <div class="streak-item win"><span class="streak-icon">✓</span><span class="streak-match">M5</span></div>
+                </div>
+                <p class="streak-summary">Current form: W — ended season on a high</p>
+            </div>
+
+            <!-- Top run scorers horizontal -->
+            <div class="chart-box">
+                <h3 class="chart-title">TOP RUN SCORERS</h3>
+                <div class="bar-chart">
+                    <div class="bar-row"><span class="bar-label">Sai Kumar</span><div class="bar-track"><div class="bar-fill" style="--bar-pct:100%"><span>108</span></div></div></div>
+                    <div class="bar-row"><span class="bar-label">Karan</span><div class="bar-track"><div class="bar-fill" style="--bar-pct:61%"><span>66</span></div></div></div>
+                    <div class="bar-row"><span class="bar-label">Karthik S</span><div class="bar-track"><div class="bar-fill" style="--bar-pct:46%"><span>50</span></div></div></div>
+                    <div class="bar-row"><span class="bar-label">Mahesh</span><div class="bar-track"><div class="bar-fill" style="--bar-pct:42%"><span>45</span></div></div></div>
+                    <div class="bar-row"><span class="bar-label">Abhishek</span><div class="bar-track"><div class="bar-fill" style="--bar-pct:34%"><span>37</span></div></div></div>
+                </div>
+            </div>
+
+            <!-- Top wicket takers -->
+            <div class="chart-box">
+                <h3 class="chart-title">TOP WICKET TAKERS</h3>
+                <div class="bar-chart">
+                    <div class="bar-row"><span class="bar-label">Karan</span><div class="bar-track"><div class="bar-fill bar-fill-red" style="--bar-pct:100%"><span>5</span></div></div></div>
+                    <div class="bar-row"><span class="bar-label">Ashok</span><div class="bar-track"><div class="bar-fill bar-fill-red" style="--bar-pct:80%"><span>4</span></div></div></div>
+                    <div class="bar-row"><span class="bar-label">Kiran</span><div class="bar-track"><div class="bar-fill bar-fill-red" style="--bar-pct:80%"><span>4</span></div></div></div>
+                    <div class="bar-row"><span class="bar-label">Kumar K</span><div class="bar-track"><div class="bar-fill bar-fill-red" style="--bar-pct:80%"><span>4</span></div></div></div>
+                    <div class="bar-row"><span class="bar-label">Ganesh</span><div class="bar-track"><div class="bar-fill bar-fill-red" style="--bar-pct:80%"><span>4</span></div></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLAYER RANKINGS -->
+    <section id="rankings" class="section section-dark section-with-logos">
+        <div class="section-logo section-logo-left" data-parallax="0.1"></div>
+        <div class="section-logo section-logo-right" data-parallax="0.1"></div>
+        <div class="section-glow section-glow-left"></div>
+        <div class="section-glow section-glow-right"></div>
+        <h2 class="sec-title">PLAYER RANKINGS</h2>
+        <p class="sec-sub">CCC Spring 2026 • Overall Performance Points</p>
+        <div class="rankings-table">
+            <div class="rank-header">
+                <span class="rank-col rank-num">#</span>
+                <span class="rank-col rank-player">PLAYER</span>
+                <span class="rank-col">MAT</span>
+                <span class="rank-col">BAT</span>
+                <span class="rank-col">BOWL</span>
+                <span class="rank-col">FIELD</span>
+                <span class="rank-col">OTHER</span>
+                <span class="rank-col">MOM</span>
+                <span class="rank-col rank-total">TOTAL</span>
+            </div>
+            <div class="rank-row gold" data-points="346"><span class="rank-col rank-num">🥇</span><span class="rank-col rank-player">Karan Sagar Vishwanath</span><span class="rank-col">4</span><span class="rank-col">196</span><span class="rank-col">140</span><span class="rank-col">10</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col rank-total">346</span></div>
+            <div class="rank-row silver" data-points="325"><span class="rank-col rank-num">🥈</span><span class="rank-col rank-player">Sai Kumar Kesana</span><span class="rank-col">4</span><span class="rank-col">265</span><span class="rank-col">0</span><span class="rank-col">10</span><span class="rank-col">50</span><span class="rank-col">1</span><span class="rank-col rank-total">325</span></div>
+            <div class="rank-row bronze" data-points="253"><span class="rank-col rank-num">🥉</span><span class="rank-col rank-player">Ashok Kumar Attluri</span><span class="rank-col">5</span><span class="rank-col">53</span><span class="rank-col">130</span><span class="rank-col">20</span><span class="rank-col">50</span><span class="rank-col">1</span><span class="rank-col rank-total">253</span></div>
+            <div class="rank-row" data-points="198"><span class="rank-col rank-num">4</span><span class="rank-col rank-player">Kiran Chamarthi</span><span class="rank-col">3</span><span class="rank-col">48</span><span class="rank-col">120</span><span class="rank-col">30</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col rank-total">198</span></div>
+            <div class="rank-row" data-points="182"><span class="rank-col rank-num">5</span><span class="rank-col rank-player">Karthik Sagar</span><span class="rank-col">4</span><span class="rank-col">122</span><span class="rank-col">-10</span><span class="rank-col">20</span><span class="rank-col">50</span><span class="rank-col">1</span><span class="rank-col rank-total">182</span></div>
+            <div class="rank-row" data-points="152"><span class="rank-col rank-num">6</span><span class="rank-col rank-player">Kumar Karthik</span><span class="rank-col">4</span><span class="rank-col">2</span><span class="rank-col">130</span><span class="rank-col">20</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col rank-total">152</span></div>
+            <div class="rank-row" data-points="124"><span class="rank-col rank-num">7</span><span class="rank-col rank-player">Abhishek Ailneni</span><span class="rank-col">4</span><span class="rank-col">84</span><span class="rank-col">0</span><span class="rank-col">40</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col rank-total">124</span></div>
+            <div class="rank-row" data-points="120"><span class="rank-col rank-num">8</span><span class="rank-col rank-player">Ayush Gupta</span><span class="rank-col">3</span><span class="rank-col">90</span><span class="rank-col">0</span><span class="rank-col">30</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col rank-total">120</span></div>
+            <div class="rank-row" data-points="101"><span class="rank-col rank-num">9</span><span class="rank-col rank-player">Sai Krishna Bobba</span><span class="rank-col">5</span><span class="rank-col">41</span><span class="rank-col">50</span><span class="rank-col">10</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col rank-total">101</span></div>
+            <div class="rank-row" data-points="98"><span class="rank-col rank-num">10</span><span class="rank-col rank-player">Ganesh Jujjuru</span><span class="rank-col">5</span><span class="rank-col">8</span><span class="rank-col">60</span><span class="rank-col">30</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col rank-total">98</span></div>
+            <div class="rank-row hidden-rank" data-points="92"><span class="rank-col rank-num">11</span><span class="rank-col rank-player">Mahesh M</span><span class="rank-col">2</span><span class="rank-col">92</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col rank-total">92</span></div>
+            <div class="rank-row hidden-rank" data-points="60"><span class="rank-col rank-num">12</span><span class="rank-col rank-player">Ajay Reddy Poreddy</span><span class="rank-col">3</span><span class="rank-col">10</span><span class="rank-col">40</span><span class="rank-col">10</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col rank-total">60</span></div>
+            <div class="rank-row hidden-rank" data-points="40"><span class="rank-col rank-num">13</span><span class="rank-col rank-player">Bharat Choudhary</span><span class="rank-col">1</span><span class="rank-col">0</span><span class="rank-col">30</span><span class="rank-col">10</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col rank-total">40</span></div>
+            <div class="rank-row hidden-rank" data-points="25"><span class="rank-col rank-num">14</span><span class="rank-col rank-player">Piyush Bhardwaj</span><span class="rank-col">2</span><span class="rank-col">15</span><span class="rank-col">0</span><span class="rank-col">10</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col rank-total">25</span></div>
+            <div class="rank-row hidden-rank" data-points="20"><span class="rank-col rank-num">15</span><span class="rank-col rank-player">Aravind Gampa</span><span class="rank-col">1</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col">20</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col rank-total">20</span></div>
+            <div class="rank-row hidden-rank" data-points="14"><span class="rank-col rank-num">16</span><span class="rank-col rank-player">Rohith Aitharaju</span><span class="rank-col">2</span><span class="rank-col">4</span><span class="rank-col">10</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col rank-total">14</span></div>
+            <div class="rank-row hidden-rank negative" data-points="-10"><span class="rank-col rank-num">17</span><span class="rank-col rank-player">Rajiv Mallojjala</span><span class="rank-col">2</span><span class="rank-col">-10</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col rank-total">-10</span></div>
+            <div class="rank-row hidden-rank negative" data-points="-39"><span class="rank-col rank-num">18</span><span class="rank-col rank-player">Ashwin Kumar Boinala</span><span class="rank-col">3</span><span class="rank-col">-9</span><span class="rank-col">-30</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col">0</span><span class="rank-col rank-total">-39</span></div>
+        </div>
+        <button class="btn-show-all" id="showAllRanks" onclick="document.querySelectorAll('.hidden-rank').forEach(r=>r.classList.toggle('hidden-rank'));this.textContent=this.textContent.includes('Show')?'Show Less':'Show All 18 Players'">Show All 18 Players</button>
+    </section>
+
+    <!-- STATS -->
+    <section id="stats" class="section section-dark section-with-logos">
+        <div class="section-logo section-logo-left" data-parallax="0.1"></div>
+        <div class="section-logo section-logo-right" data-parallax="0.1"></div>
+        <div class="section-glow section-glow-left"></div>
+        <div class="section-glow section-glow-right"></div>
+        <h2 class="sec-title">TOP PERFORMERS</h2>
+        <div class="performers">
+            <div class="perf"><div class="perf-icon">🏏</div><div class="perf-cat">TOP SCORER</div><div class="perf-name">Sai Kumar Kesana</div><div class="perf-val">108 runs</div></div>
+            <div class="perf"><div class="perf-icon">🎯</div><div class="perf-cat">TOP WICKETS</div><div class="perf-name">Karan Sagar Vishwanath</div><div class="perf-val">5 wkts</div></div>
+            <div class="perf"><div class="perf-icon">⚡</div><div class="perf-cat">BEST ECONOMY</div><div class="perf-name">Ashok Kumar Attluri</div><div class="perf-val">4.50</div></div>
+            <div class="perf"><div class="perf-icon">💥</div><div class="perf-cat">BEST SR (BAT)</div><div class="perf-name">Ashok Kumar Attluri</div><div class="perf-val">133.33</div></div>
+        </div>
+
+        <!-- STATS TABS -->
+        <div class="stats-tabs">
+            <button class="tab-btn active" data-tab="batting">Batting</button>
+            <button class="tab-btn" data-tab="bowling">Bowling</button>
+            <button class="tab-btn" data-tab="fielding">Fielding</button>
+        </div>
+
+        <div class="tab-content active" id="tab-batting">
+            <div class="squad-carousel">
+                <div class="player"><div class="p-number">108</div><div class="p-img">🏏</div><div class="p-info"><span class="p-role">TOP SCORER</span><span class="p-name">Sai Kumar Kesana</span><span class="p-stat">108 runs | Avg 36.00 | HS 45 | SR 120 | 6 sixes</span></div></div>
+                <div class="player"><div class="p-number">66</div><div class="p-img">🏏</div><div class="p-info"><span class="p-role">BATTER</span><span class="p-name">Karan Sagar Vishwanath</span><span class="p-stat">66 runs | Avg 16.50 | HS 22 | SR 120</span></div></div>
+                <div class="player"><div class="p-number">50</div><div class="p-img">🏏</div><div class="p-info"><span class="p-role">BATTER</span><span class="p-name">Karthik Sagar</span><span class="p-stat">50 runs | Avg 12.50 | HS 31 | SR 108.7 | 5 sixes</span></div></div>
+                <div class="player"><div class="p-number">45</div><div class="p-img">🏏</div><div class="p-info"><span class="p-role">BATTER</span><span class="p-name">Mahesh M</span><span class="p-stat">45 runs | Avg 22.50 | HS 45 | SR 107 | 3 sixes</span></div></div>
+                <div class="player"><div class="p-number">37</div><div class="p-img">🏏</div><div class="p-info"><span class="p-role">BATTER</span><span class="p-name">Abhishek Ailneni</span><span class="p-stat">37 runs | Avg 9.25 | HS 29 | SR 123.33</span></div></div>
+                <div class="player"><div class="p-number">28</div><div class="p-img">🏏</div><div class="p-info"><span class="p-role">ALL-ROUNDER</span><span class="p-name">Sai Krishna Bobba</span><span class="p-stat">28 runs* | Avg 14.00 | HS 10 | 5 matches</span></div></div>
+                <div class="player"><div class="p-number">28</div><div class="p-img">🏏</div><div class="p-info"><span class="p-role">ALL-ROUNDER</span><span class="p-name">Ganesh Jujjuru</span><span class="p-stat">28 runs | Avg 9.33 | HS 17 | 5 matches</span></div></div>
+                <div class="player"><div class="p-number">27</div><div class="p-img">🏏</div><div class="p-info"><span class="p-role">BATTER</span><span class="p-name">Ayush Gupta</span><span class="p-stat">27 runs* | Avg 13.50 | HS 18 | SR 100</span></div></div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="tab-bowling">
+            <div class="squad-carousel">
+                <div class="player"><div class="p-number">5W</div><div class="p-img">🔴</div><div class="p-info"><span class="p-role">BOWLER</span><span class="p-name">Karan Sagar Vishwanath</span><span class="p-stat">5 wkts | 11 ov | Econ 5.73 | BB 13/2</span></div></div>
+                <div class="player"><div class="p-number">4W</div><div class="p-img">🔴</div><div class="p-info"><span class="p-role">CAPTAIN</span><span class="p-name">Ashok Kumar Attluri</span><span class="p-stat">4 wkts | 6 ov | Econ 4.50 | BB 4/3</span></div></div>
+                <div class="player"><div class="p-number">4W</div><div class="p-img">🔴</div><div class="p-info"><span class="p-role">BOWLER</span><span class="p-name">Kiran Chamarthi</span><span class="p-stat">4 wkts | 8 ov | Econ 5.50 | BB 12/2</span></div></div>
+                <div class="player"><div class="p-number">4W</div><div class="p-img">🔴</div><div class="p-info"><span class="p-role">BOWLER</span><span class="p-name">Kumar Karthik</span><span class="p-stat">4 wkts | 10 ov | Econ 6.50 | BB 12/2 | 1 maiden</span></div></div>
+                <div class="player"><div class="p-number">4W</div><div class="p-img">🔴</div><div class="p-info"><span class="p-role">ALL-ROUNDER</span><span class="p-name">Ganesh Jujjuru</span><span class="p-stat">4 wkts | 10.5 ov | Econ 8.31 | BB 26/2</span></div></div>
+                <div class="player"><div class="p-number">2W</div><div class="p-img">🔴</div><div class="p-info"><span class="p-role">ALL-ROUNDER</span><span class="p-name">Sai Krishna Bobba</span><span class="p-stat">2 wkts | 1 ov | Econ 5.00 | BB 5/2</span></div></div>
+                <div class="player"><div class="p-number">1W</div><div class="p-img">🔴</div><div class="p-info"><span class="p-role">BOWLER</span><span class="p-name">Bharat Choudhary</span><span class="p-stat">1 wkt | 3 ov | Econ 5.67 | BB 17/1</span></div></div>
+                <div class="player"><div class="p-number">1W</div><div class="p-img">🔴</div><div class="p-info"><span class="p-role">BOWLER</span><span class="p-name">Ajay Reddy Poreddy</span><span class="p-stat">1 wkt | 9 ov | Econ 5.78 | BB 13/1</span></div></div>
+                <div class="player"><div class="p-number">1W</div><div class="p-img">🔴</div><div class="p-info"><span class="p-role">VICE CAPTAIN</span><span class="p-name">Rohith Aitharaju</span><span class="p-stat">1 wkt | 3 ov | Econ 10.33 | BB 19/1</span></div></div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="tab-fielding">
+            <div class="squad-carousel">
+                <div class="player"><div class="p-number">3</div><div class="p-img">🤲</div><div class="p-info"><span class="p-role">FIELDER</span><span class="p-name">Abhishek Ailneni</span><span class="p-stat">2 WK catches | 1 direct RO | Total: 3</span></div></div>
+                <div class="player"><div class="p-number">3</div><div class="p-img">🤲</div><div class="p-info"><span class="p-role">FIELDER</span><span class="p-name">Ayush Gupta</span><span class="p-stat">3 catches | Total: 3</span></div></div>
+                <div class="player"><div class="p-number">2</div><div class="p-img">🤲</div><div class="p-info"><span class="p-role">FIELDER</span><span class="p-name">Ganesh Jujjuru</span><span class="p-stat">1 catch | 1 direct RO | Total: 2</span></div></div>
+                <div class="player"><div class="p-number">2</div><div class="p-img">🤲</div><div class="p-info"><span class="p-role">FIELDER</span><span class="p-name">Kiran Chamarthi</span><span class="p-stat">1 catch | 1 direct RO | Total: 2</span></div></div>
+                <div class="player"><div class="p-number">2</div><div class="p-img">🤲</div><div class="p-info"><span class="p-role">WICKET-KEEPER</span><span class="p-name">Karthik Sagar</span><span class="p-stat">2 WK catches | Total: 2</span></div></div>
+                <div class="player"><div class="p-number">2</div><div class="p-img">🤲</div><div class="p-info"><span class="p-role">FIELDER</span><span class="p-name">Aravind Gampa</span><span class="p-stat">2 catches | Total: 2</span></div></div>
+                <div class="player"><div class="p-number">2</div><div class="p-img">🤲</div><div class="p-info"><span class="p-role">CAPTAIN</span><span class="p-name">Ashok Kumar Attluri</span><span class="p-stat">2 catches | Total: 2</span></div></div>
+                <div class="player"><div class="p-number">1</div><div class="p-img">🤲</div><div class="p-info"><span class="p-role">FIELDER</span><span class="p-name">Kumar Karthik</span><span class="p-stat">1 direct RO | Total: 1</span></div></div>
+                <div class="player"><div class="p-number">1</div><div class="p-img">🤲</div><div class="p-info"><span class="p-role">FIELDER</span><span class="p-name">Ajay Reddy Poreddy</span><span class="p-stat">1 catch | Total: 1</span></div></div>
+                <div class="player"><div class="p-number">1</div><div class="p-img">🤲</div><div class="p-info"><span class="p-role">FIELDER</span><span class="p-name">Bharat Choudhary</span><span class="p-stat">1 catch | Total: 1</span></div></div>
+                <div class="player"><div class="p-number">1</div><div class="p-img">🤲</div><div class="p-info"><span class="p-role">FIELDER</span><span class="p-name">Sai Krishna Bobba</span><span class="p-stat">1 catch | Total: 1</span></div></div>
+                <div class="player"><div class="p-number">1</div><div class="p-img">🤲</div><div class="p-info"><span class="p-role">FIELDER</span><span class="p-name">Sai Kumar Kesana</span><span class="p-stat">1 catch | Total: 1</span></div></div>
+                <div class="player"><div class="p-number">1</div><div class="p-img">🤲</div><div class="p-info"><span class="p-role">FIELDER</span><span class="p-name">Karan Sagar Vishwanath</span><span class="p-stat">1 catch | Total: 1</span></div></div>
+                <div class="player"><div class="p-number">1</div><div class="p-img">🤲</div><div class="p-info"><span class="p-role">FIELDER</span><span class="p-name">Piyush Bhardwaj</span><span class="p-stat">1 catch | Total: 1</span></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news" class="section">
+        <h2 class="sec-title">IN THE NEWS</h2>
+        <div class="news-grid">
+            <article class="news-card" onclick="openNews(this)">
+                <div class="nc-date">MAY 16</div>
+                <h3>Mamas Crush Everest by 39 Runs</h3>
+                <p>MHM posted 122/5 in 15 overs and bowled out Everest Community Club for 83.</p>
+                <div class="nc-detail">
+                    <p><strong>MH Mamas 122/5 (15.0 ov)</strong> beat <strong>Everest Community Club 83/8 (15.0 ov)</strong> by 39 runs.</p>
+                    <p>Sai Kumar Kesana anchored the innings while the bowling unit strangled the chase from the start. The 3rd win of the season pushed MHM's win rate to 60%.</p>
+                    <p class="nc-highlight">🏏 Highest team score of the season: 122/5</p>
+                </div>
+            </article>
+            <article class="news-card" onclick="openNews(this)">
+                <div class="nc-date">APR 4</div>
+                <h3>1-Run Thriller — Mamas Defend 72</h3>
+                <p>In the most dramatic finish of the season, MHM defended just 72 against COMILLA Victorians.</p>
+                <div class="nc-detail">
+                    <p><strong>MH Mamas 72/6 (15.0 ov)</strong> beat <strong>COMILLA Victorians 71/10 (13.1 ov)</strong> by 1 run.</p>
+                    <p>Nerves of steel from the bowling attack sealed a legendary win. COMILLA were bowled out just 1 run short in a match that had everyone on the edge of their seats.</p>
+                    <p class="nc-highlight">🔥 Closest win of the CCC Spring 2026 season</p>
+                </div>
+            </article>
+            <article class="news-card" onclick="openNews(this)">
+                <div class="nc-date">APR 12</div>
+                <h3>Clinical Chase vs Himalayan Hawks</h3>
+                <p>Chasing 115, the Mamas got home in just 13.3 overs with 6 wickets in hand.</p>
+                <div class="nc-detail">
+                    <p><strong>Himalayan Hawks 114/4 (15.0 ov)</strong> lost to <strong>MH Mamas 116/4 (13.3 ov)</strong> by 6 wickets.</p>
+                    <p>A statement win showing the batting depth of this squad. The top order fired in unison, chasing down the target with 1.3 overs to spare.</p>
+                    <p class="nc-highlight">⚡ Fastest chase of the season: 13.3 overs</p>
+                </div>
+            </article>
+            <article class="news-card" onclick="openNews(this)">
+                <div class="nc-date">MAY 16</div>
+                <h3>Karan Sagar Tops Player Rankings</h3>
+                <p>With 346 total points, Karan Sagar Vishwanath leads the MHM player rankings.</p>
+                <div class="nc-detail">
+                    <p><strong>Rankings breakdown:</strong> Batting 196 | Bowling 140 | Fielding 10 | Total: 346 pts</p>
+                    <p>His all-round contributions with both bat and ball across 4 matches have been the backbone of the Mamas' campaign. Sai Kumar Kesana (325) and captain Ashok Kumar Attluri (253) round out the top 3.</p>
+                    <p class="nc-highlight">🥇 #1 ranked player in MHM for CCC Spring 2026</p>
+                </div>
+            </article>
+            <article class="news-card" onclick="openNews(this)">
+                <div class="nc-date">APR 19</div>
+                <h3>Trojans Edge Past Mamas</h3>
+                <p>Despite posting 101/8, NC Trojans chased it down with 4 wickets in hand.</p>
+                <div class="nc-detail">
+                    <p><strong>MH Mamas 101/8 (15.0 ov)</strong> lost to <strong>NC Trojans 102/6 (14.4 ov)</strong> by 4 wickets.</p>
+                    <p>A tough loss but lessons learned for the squad. The Mamas put up a competitive total but the Trojans' middle order held firm under pressure to get over the line with 2 balls remaining.</p>
+                    <p class="nc-highlight">📉 Loss #2 of the season — but the fight was real</p>
+                </div>
+            </article>
+            <article class="news-card" onclick="openNews(this)">
+                <div class="nc-date">JUN 6</div>
+                <h3>Next Up: Auburn Spartans</h3>
+                <p>The Mamas face Auburn Spartans at RTP2 on Saturday, June 6 at 9:30 AM.</p>
+                <div class="nc-detail">
+                    <p><strong>Match:</strong> Auburn Spartans vs MH Mamas</p>
+                    <p><strong>When:</strong> Saturday, June 6, 2026 • 9:30 AM</p>
+                    <p><strong>Where:</strong> RTP2, Apex NC</p>
+                    <p>With a 60% win rate and momentum from the Everest demolition, the squad looks to extend their strong run. Come out and support the Mamas!</p>
+                    <p class="nc-highlight">📅 Game day — Fear The Mamas</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section section-dark">
+        <h2 class="sec-title">GALLERY</h2>
+        <div class="gal-grid">
+            <div class="gal-item big"></div>
+            <div class="gal-item"></div>
+            <div class="gal-item"></div>
+            <div class="gal-item"></div>
+            <div class="gal-item big"></div>
+            <div class="gal-item"></div>
+        </div>
+        <p class="gal-note">Photos coming soon — add match day images here</p>
+    </section>
+
+    <!-- JOIN -->
+    <section id="join" class="section section-join section-with-logos">
+        <div class="section-logo section-logo-left" data-parallax="0.1"></div>
+        <div class="section-logo section-logo-right" data-parallax="0.1"></div>
+        <div class="section-glow section-glow-left"></div>
+        <div class="section-glow section-glow-right"></div>
+        <div class="join-content">
+            <h2>FEAR THE MAMAS.</h2>
+            <p>Think you've got what it takes? Join the squad.</p>
+            <a href="mailto:mansionhousemamas@gmail.com" class="btn-fire">Join Now →</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="foot-top">
+            <div class="foot-brand"><img src="assets/logo.png" alt="MHM Logo" class="foot-logo"><p>Mansion House Mamas CC<br>Apex, North Carolina</p></div>
+            <div class="foot-links"><a href="#squad">Squad</a><a href="#fixtures">Matches</a><a href="#rankings">Rankings</a><a href="#stats">Stats</a><a href="#news">News</a><a href="#join">Join</a></div>
+            <div class="foot-contact"><p>📍 Apex, NC</p><p>✉️ mansionhousemamas@gmail.com</p></div>
+        </div>
+        <div class="foot-bar">© 2026 Mansion House Mamas Cricket Club • Fear The Mamas<br><span class="designed-by">Site designed by AB</span></div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+    <!-- PLAYER MODAL -->
+    <div class="player-modal" id="playerModal">
+        <div class="pm-overlay" onclick="closePlayerModal()"></div>
+        <div class="pm-content">
+            <button class="pm-close" onclick="closePlayerModal()">✕</button>
+            <div class="pm-layout">
+                <div class="pm-left">
+                    <div class="pm-jersey" id="pmJersey">01</div>
+                    <div class="pm-role" id="pmRole">ALL-ROUNDER</div>
+                    <h2 class="pm-name" id="pmName">ASHOK<br>ATTLURI</h2>
+                    <div class="pm-team">MANSION HOUSE MAMAS</div>
+                    <div class="pm-season">CCC Spring 2026</div>
+                    <div class="pm-impact-title">CCC IMPACT</div>
+                    <div class="pm-stats" id="pmStats"></div>
+                    <div class="pm-overview" id="pmOverview"></div>
+                </div>
+                <div class="pm-right">
+                    <div class="pm-img" id="pmImg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Intersection Observer for scroll animations
+    const o=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show')}),{threshold:0.08});
+    document.querySelectorAll('.sbar,.squad-card,.player,.fix,.mile,.perf,.news-card,.gal-item,.rank-row:not(.hidden-rank),.tl-item').forEach(e=>o.observe(e));
+
+    // Parallax hero
+    window.addEventListener('scroll',()=>{
+        const s=window.scrollY;
+        document.querySelector('.fire-bg').style.transform=`translateY(${s*0.3}px)`;
+        // Scroll progress bar
+        const h=document.documentElement.scrollHeight-window.innerHeight;
+        document.getElementById('scrollProgress').style.width=`${(s/h)*100}%`;
+        // Back to top button
+        document.getElementById('backToTop').classList.toggle('visible',s>600);
+    });
+
+    // Animated counters
+    const counterObserver=new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                const spans=entry.target.querySelectorAll('[data-count]');
+                spans.forEach(span=>{
+                    const target=parseInt(span.dataset.count);
+                    const suffix=span.closest('.accent')?'%':'';
+                    let current=0;
+                    const step=Math.max(1,Math.floor(target/40));
+                    const timer=setInterval(()=>{
+                        current+=step;
+                        if(current>=target){current=target;clearInterval(timer);}
+                        span.textContent=current+suffix;
+                    },30);
+                });
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    },{threshold:0.5});
+    counterObserver.observe(document.querySelector('.stats-bar'));
+
+    // Stats tabs
+    document.querySelectorAll('.tab-btn').forEach(btn=>{
+        btn.addEventListener('click',()=>{
+            document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+            // Re-observe new players
+            document.getElementById('tab-'+btn.dataset.tab).querySelectorAll('.player').forEach(p=>{p.classList.remove('show');o.observe(p);});
+        });
+    });
+
+    // Ember particles - spawn across the whole page, not just hero
+    function createEmber(){
+        const ember=document.createElement('div');
+        ember.className='ember';
+        ember.style.left=Math.random()*100+'%';
+        ember.style.animationDuration=(3+Math.random()*4)+'s';
+        ember.style.opacity=Math.random()*0.6+0.2;
+        ember.style.width=ember.style.height=(2+Math.random()*4)+'px';
+        document.body.appendChild(ember);
+        setTimeout(()=>ember.remove(),7000);
+    }
+    setInterval(createEmber,300);
+
+    // Ranking bar chart backgrounds
+    document.querySelectorAll('.rank-row[data-points]').forEach(row=>{
+        const pts=parseInt(row.dataset.points);
+        const maxPts=346;
+        const pct=Math.max(0,(pts/maxPts)*100);
+        row.style.setProperty('--bar-width',pct+'%');
+    });
+    // Squad card Read More - open modal
+    document.querySelectorAll('.sc-readmore').forEach(link => {
+        link.addEventListener('click', function(e){
+            e.stopPropagation();
+            const card = this.closest('.squad-card');
+            const name = card.querySelector('.sc-back-name').textContent;
+            openPlayerModal(name);
+        });
+    });
+
+    // News card expand
+    function openNews(card){
+        card.classList.toggle('expanded');
+    }
+
+    // Player modal data
+    const playerData = {
+        'Ashok Kumar Attluri': {jersey:'01',role:'ALL-ROUNDER',name:'ASHOK KUMAR<br>ATTLURI',img:'assets/players/Ashok.jpeg',stats:[['12','Runs'],['5','Matches'],['133','Strike Rate'],['4','Wickets'],['4.50','Economy'],['253','Rank Pts']],overview:'Captain and heart of the Mamas. Ashok leads from the front with both bat and ball, delivering crucial performances in pressure situations. His economy of 4.50 is the best in the squad, and his all-round contributions earned him Rank #3 with 253 points and 1 Man of the Match award.'},
+        'Rohith Aitharaju': {jersey:'02',role:'ALL-ROUNDER',name:'ROHITH<br>AITHARAJU',img:'assets/players/Rohith.jpeg',stats:[['4','Runs'],['2','Matches'],['1','Wickets'],['10.33','Economy'],['14','Rank Pts'],['16','Rank']],overview:'Vice Captain of the Mamas. Rohith brings leadership and composure to the squad, contributing with both bat and ball across the season.'},
+        'Sai Kumar Kesana': {jersey:'03',role:'BATTER',name:'SAI KUMAR<br>KESANA',img:'assets/players/Sai Kumar Kesana.jpeg',stats:[['108','Runs'],['36','Average'],['45','Best Score'],['120','Strike Rate'],['6','Sixes'],['325','Rank Pts']],overview:'The run machine of MHM. Sai Kumar tops the batting charts with 108 runs at an average of 36 and a strike rate of 120. His consistency earned him Rank #2 overall with 325 points and 1 Man of the Match award. The backbone of the Mamas batting lineup.'},
+        'Karan Sagar Vishwanath': {jersey:'11',role:'ALL-ROUNDER',name:'KARAN SAGAR<br>VISHWANATH',img:'assets/players/Karan.jpeg',stats:[['66','Runs'],['120','Strike Rate'],['5','Wickets'],['5.73','Economy'],['346','Rank Pts'],['1','Rank']],overview:'The #1 ranked player in the squad. Karan dominates with both bat and ball — 66 runs at SR 120 and 5 wickets with an economy of 5.73. His 346 total ranking points (196 batting + 140 bowling) make him the most impactful player of CCC Spring 2026.'},
+        'Karthik Sagar': {jersey:'04',role:'ALL-ROUNDER',name:'KARTHIK<br>SAGAR',img:'assets/players/Karthik Sagar.jpeg',stats:[['50','Runs'],['31','Best Score'],['109','Strike Rate'],['4','Matches'],['182','Rank Pts'],['1','MOM']],overview:'A reliable middle-order bat and handy behind the stumps. Karthik scored 50 runs with a high score of 31 and earned 1 Man of the Match award. His 182 ranking points place him at #5 in the squad.'},
+        'Mahesh M': {jersey:'05',role:'BATTER',name:'MAHESH<br>M',img:'',stats:[['45','Runs'],['22.50','Average'],['45','Best Score'],['107','Strike Rate'],['2','Matches'],['92','Rank Pts']],overview:'An explosive batter who made an immediate impact in just 2 matches. Mahesh scored 45 runs at an average of 22.50 with a best of 45, showing he can anchor an innings when needed.'},
+        'Abhishek Ailneni': {jersey:'06',role:'ALL-ROUNDER',name:'ABHISHEK<br>AILNENI',img:'',stats:[['37','Runs'],['123','Strike Rate'],['3','Dismissals'],['4','Matches'],['124','Rank Pts'],['7','Rank']],overview:'A dynamic fielder and aggressive batter. Abhishek scored 37 runs at a strike rate of 123 and leads the fielding charts with 3 dismissals (2 WK catches + 1 direct run out). Ranked #7 with 124 points.'},
+        'Sai Krishna Bobba': {jersey:'07',role:'ALL-ROUNDER',name:'SAI KRISHNA<br>BOBBA',img:'assets/players/Sai Krishna Bobba.jpeg',stats:[['28','Runs'],['2','Wickets'],['5.00','Economy'],['5','Matches'],['101','Rank Pts'],['9','Rank']],overview:'A steady all-rounder who contributes in every department. Sai Krishna played all 5 matches, picking up 2 wickets at an excellent economy of 5.00 with a best of 5/2.'},
+        'Ganesh Jujjuru': {jersey:'08',role:'ALL-ROUNDER',name:'GANESH<br>JUJJURU',img:'assets/players/Ganesh.webp',stats:[['28','Runs'],['4','Wickets'],['8.31','Economy'],['5','Matches'],['98','Rank Pts'],['10','Rank']],overview:'An ever-present all-rounder who played all 5 matches. Ganesh picked up 4 wickets and contributed 28 runs with the bat. Also sharp in the field with 2 dismissals.'},
+        'Ayush Gupta': {jersey:'09',role:'BATTER',name:'AYUSH<br>GUPTA',img:'assets/players/Ayush.jpeg',stats:[['27','Runs'],['13.50','Average'],['18','Best Score'],['3','Catches'],['120','Rank Pts'],['8','Rank']],overview:'A solid batter and outstanding fielder. Ayush scored 27 runs and took 3 catches — tied for the most in the squad. His 120 ranking points place him at #8.'},
+        'Kiran Chamarthi': {jersey:'10',role:'ALL-ROUNDER',name:'KIRAN<br>CHAMARTHI',img:'assets/players/Kiran.webp',stats:[['16','Runs'],['4','Wickets'],['5.50','Economy'],['3','Matches'],['198','Rank Pts'],['4','Rank']],overview:'A bowling force in just 3 matches. Kiran took 4 wickets at an economy of 5.50 and ranks #4 overall with 198 points. His bowling points (120) are among the highest in the squad.'},
+        'Piyush Bhardwaj': {jersey:'12',role:'BATTER',name:'PIYUSH<br>BHARDWAJ',img:'assets/players/Piyush.jpeg',stats:[['15','Runs'],['75','Strike Rate'],['2','Matches'],['25','Rank Pts'],['14','Rank'],['1','Catch']],overview:'A developing batter who contributed 15 runs across 2 matches and took 1 catch in the field.'},
+        'Ajay Reddy Poreddy': {jersey:'13',role:'ALL-ROUNDER',name:'AJAY REDDY<br>POREDDY',img:'assets/players/Ajay.jpg',stats:[['9','Runs'],['1','Wickets'],['5.78','Economy'],['9','Overs'],['60','Rank Pts'],['12','Rank']],overview:'A reliable medium-pace bowler who bowled 9 overs across 3 matches at an economy of 5.78. Ajay provides control in the middle overs.'},
+        'Kumar Karthik': {jersey:'14',role:'BOWLER',name:'KUMAR<br>KARTHIK',img:'assets/players/Kumar Karthik.webp',stats:[['4','Wickets'],['6.50','Economy'],['10','Overs'],['1','Maiden'],['152','Rank Pts'],['6','Rank']],overview:'The only bowler to bowl a maiden this season. Kumar Karthik took 4 wickets in 10 overs and ranks #6 with 152 points. His bowling ranking of 130 is joint-highest in the squad.'},
+        'Ashwin Kumar Boinala': {jersey:'15',role:'BOWLER',name:'ASHWIN<br>BOINALA',img:'assets/players/Ashwin.jpeg',stats:[['1','Runs'],['0','Wickets'],['14.67','Economy'],['3','Matches'],['3','Overs'],['-39','Rank Pts']],overview:'A developing bowler who bowled 3 overs across 3 matches. Looking to improve his economy and find his rhythm in upcoming fixtures.'},
+        'Bharat Choudhary': {jersey:'16',role:'ALL-ROUNDER',name:'BHARAT<br>CHOUDHARY',img:'assets/players/Bharat.jpeg',stats:[['1','Wickets'],['5.67','Economy'],['3','Overs'],['1','Match'],['40','Rank Pts'],['13','Rank']],overview:'Made an impact in his only match with 1 wicket at an economy of 5.67 and a catch in the field. A promising all-rounder for the squad.'},
+        'Aravind Gampa': {jersey:'17',role:'PLAYER',name:'ARAVIND<br>GAMPA',img:'assets/players/Aravind.webp',stats:[['0','Runs'],['0','Wickets'],['2','Catches'],['1','Match'],['20','Rank Pts'],['15','Rank']],overview:'Made his mark in the field with 2 catches in his only match. A sharp fielder who contributes to the team effort.'},
+        'Rajiv Mallojjala': {jersey:'18',role:'PLAYER',name:'RAJIV<br>MALLOJJALA',img:'assets/players/Rajiv.jpeg',stats:[['0','Runs'],['0','Wickets'],['2','Matches'],['0','Catches'],['-10','Rank Pts'],['17','Rank']],overview:'Played 2 matches in the season. Looking to make a bigger impact in upcoming fixtures.'}
+    };
+
+    function openPlayerModal(name){
+        const p = playerData[name];
+        if(!p) return;
+        document.getElementById('pmJersey').textContent = p.jersey;
+        document.getElementById('pmRole').textContent = p.role;
+        document.getElementById('pmName').innerHTML = p.name;
+        document.getElementById('pmImg').innerHTML = p.img ? '<img src="'+p.img+'" alt="'+name+'">' : '<span class="pm-placeholder">👤</span>';
+        let statsHtml = '';
+        p.stats.forEach(s => { statsHtml += '<div class="pm-stat-box"><span class="pm-stat-val">'+s[0]+'</span><span class="pm-stat-label">'+s[1]+'</span></div>'; });
+        document.getElementById('pmStats').innerHTML = statsHtml;
+        document.getElementById('pmOverview').innerHTML = '<h3>PLAYER OVERVIEW</h3><p>'+p.overview+'</p>';
+        document.getElementById('playerModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closePlayerModal(){
+        document.getElementById('playerModal').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    </script>
+</body>
+</html>
