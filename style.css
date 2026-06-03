@@ -216,8 +216,8 @@ nav{position:fixed;top:3px;width:100%;padding:16px 32px;display:flex;align-items
 
 /* RANKINGS TABLE */
 .rankings-table{max-width:1100px;margin:0 auto;border:1px solid var(--border);border-radius:12px;overflow:hidden;}
-.rank-header{display:grid;grid-template-columns:50px 1fr repeat(6,60px) 70px;padding:16px 20px;background:rgba(255,107,0,0.08);border-bottom:1px solid var(--border);font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--fire);}
-.rank-row{display:grid;grid-template-columns:50px 1fr repeat(6,60px) 70px;padding:14px 20px;border-bottom:1px solid var(--border);font-size:13px;position:relative;overflow:hidden;opacity:0;transform:translateY(5px);transition:all .3s ease;}
+.rank-header{display:grid;grid-template-columns:50px 1fr repeat(5,60px) 70px;padding:16px 20px;background:rgba(255,107,0,0.08);border-bottom:1px solid var(--border);font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--fire);}
+.rank-row{display:grid;grid-template-columns:50px 1fr repeat(5,60px) 70px;padding:14px 20px;border-bottom:1px solid var(--border);font-size:13px;position:relative;overflow:hidden;opacity:0;transform:translateY(5px);transition:all .3s ease;}
 .rank-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:var(--bar-width,0);background:linear-gradient(90deg,rgba(255,107,0,0.06) 0%,transparent 100%);z-index:0;transition:width .6s ease;}
 .rank-row.show{opacity:1;transform:none;}
 .rank-row:last-child{border-bottom:none;}
@@ -350,7 +350,7 @@ footer{background:var(--darker);border-top:1px solid var(--border);padding:50px 
     .video-grid{grid-template-columns:1fr;}
     .video-item.big{grid-column:span 1;}
     .foot-top{grid-template-columns:1fr;gap:24px;}
-    .rank-header,.rank-row{grid-template-columns:35px 1fr repeat(6,40px) 55px;padding:10px 12px;font-size:11px;}
+    .rank-header,.rank-row{grid-template-columns:35px 1fr repeat(5,40px) 55px;padding:10px 12px;font-size:11px;}
     .rank-col.rank-total{font-size:16px;}
     .rank-col.rank-num{font-size:14px;}
     .rank-col.rank-player{font-size:11px;}
@@ -370,7 +370,7 @@ footer{background:var(--darker);border-top:1px solid var(--border);padding:50px 
 
 @media(max-width:480px){
     .rank-header,.rank-row{grid-template-columns:30px 1fr 40px 40px 40px 50px;font-size:10px;}
-    .rank-header .rank-col:nth-child(6),.rank-header .rank-col:nth-child(7),.rank-header .rank-col:nth-child(8),
-    .rank-row .rank-col:nth-child(6),.rank-row .rank-col:nth-child(7),.rank-row .rank-col:nth-child(8){display:none;}
+    .rank-header .rank-col:nth-child(5),.rank-header .rank-col:nth-child(6),
+    .rank-row .rank-col:nth-child(5),.rank-row .rank-col:nth-child(6){display:none;}
     .performers{grid-template-columns:1fr;}
 }
