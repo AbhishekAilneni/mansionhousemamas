@@ -378,7 +378,7 @@ footer{background:var(--darker);border-top:1px solid var(--border);padding:50px 
 
 @media(max-width:480px){
     .rank-header,.rank-row{grid-template-columns:30px 1fr 40px 40px 40px 50px;font-size:10px;}
-    .rank-header .rank-col:nth-child(5),.rank-header .rank-col:nth-child(6),
-    .rank-row .rank-col:nth-child(5),.rank-row .rank-col:nth-child(6){display:none;}
+    .rank-header .rank-col:nth-child(3),.rank-header .rank-col:nth-child(7),
+    .rank-row .rank-col:nth-child(3),.rank-row .rank-col:nth-child(7){display:none;}
     .performers{grid-template-columns:1fr;}
 }
