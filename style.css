@@ -55,7 +55,7 @@ nav{position:fixed;top:3px;width:100%;padding:16px 32px;display:flex;align-items
 }
 .ember{position:fixed;bottom:-10px;background:var(--fire);border-radius:50%;animation:float-up linear forwards;filter:blur(1px);pointer-events:none;z-index:0;}
 @keyframes float-up{0%{transform:translateY(0) translateX(0);opacity:1;}100%{transform:translateY(-100vh) translateX(30px);opacity:0;}}
-.hero-inner{position:relative;z-index:2;text-align:center;padding:40px;}
+.hero-inner{position:relative;z-index:2;text-align:center;padding:80px 40px 40px;}
 .hero-league{font-size:12px;letter-spacing:4px;color:var(--fire);margin-bottom:24px;font-weight:600;}
 .hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(80px,15vw,180px);line-height:0.85;letter-spacing:4px;background:linear-gradient(180deg,#fff 0%,#ff6b00 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:24px;animation:glow 3s ease-in-out infinite alternate;}
 @keyframes glow{from{filter:drop-shadow(0 0 20px rgba(255,107,0,0.3))}to{filter:drop-shadow(0 0 40px rgba(255,107,0,0.6))}}
