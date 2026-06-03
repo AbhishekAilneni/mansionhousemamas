@@ -292,7 +292,7 @@ footer{background:var(--darker);border-top:1px solid var(--border);padding:50px 
 .foot-top{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1100px;margin:0 auto 30px;}
 .foot-brand p{color:var(--muted);font-size:13px;margin-top:12px;line-height:1.8;}
 .foot-logo{width:60px;height:60px;object-fit:contain;border-radius:8px;margin-bottom:8px;}
-.foot-links{display:flex;flex-direction:column;gap:8px;}
+.foot-links{display:flex;flex-direction:column;gap:8px;align-items:flex-end;}
 .foot-links a{color:var(--muted);text-decoration:none;font-size:13px;transition:color .2s;}
 .foot-links a:hover{color:var(--fire);}
 .foot-contact p{color:var(--muted);font-size:13px;line-height:2;}
