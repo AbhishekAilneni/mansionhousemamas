@@ -745,6 +745,13 @@
         setTimeout(()=>{loader.classList.add('hidden');setTimeout(()=>loader.remove(),500);},1200);
     });
 
+    // Close mobile nav on link click
+    document.querySelectorAll('.nav-links a').forEach(link=>{
+        link.addEventListener('click',()=>{
+            document.getElementById('nav').classList.remove('open');
+        });
+    });
+
     // Match countdown timer
     function updateCountdown(){
         const matchDate=new Date('2026-06-06T09:30:00-04:00');
