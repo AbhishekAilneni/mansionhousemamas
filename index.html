@@ -740,6 +740,13 @@
     </div>
 
     <script>
+    // Disable right-click context menu
+    document.addEventListener('contextmenu',e=>e.preventDefault());
+    // Disable view source shortcuts
+    document.addEventListener('keydown',e=>{
+        if(e.ctrlKey&&(e.key==='u'||e.key==='s'||e.key==='i'||e.key==='j')||e.key==='F12')e.preventDefault();
+    });
+
     // Page loader
     window.addEventListener('load',()=>{
         const loader=document.getElementById('pageLoader');
