@@ -385,9 +385,9 @@ footer{background:var(--darker);border-top:1px solid var(--border);padding:50px 
 
 /* LEAGUE TOGGLE */
 .league-toggle{display:flex;justify-content:center;gap:8px;padding:16px 24px;background:var(--darker);border-bottom:1px solid var(--border);position:sticky;top:60px;z-index:998;}
-.league-btn{background:transparent;border:1px solid var(--border);color:var(--muted);padding:10px 24px;border-radius:6px;font-weight:600;font-size:12px;cursor:pointer;transition:all .2s;letter-spacing:1px;text-transform:uppercase;}
-.league-btn.active{background:var(--text);color:var(--dark);border-color:var(--text);}
-.league-btn:hover:not(.active){color:var(--text);border-color:var(--text);}
+.league-btn{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:10px 24px;border-radius:6px;font-weight:600;font-size:12px;cursor:pointer;transition:all .2s;letter-spacing:1px;text-transform:uppercase;}
+.league-btn.active{background:var(--fire);color:#000;border-color:var(--fire);}
+.league-btn:hover:not(.active){color:var(--text);border-color:#333;}
 
 /* LEAGUE CONTENT CONTAINERS */
 .league-content{animation:fadeIn .3s ease;}
