@@ -328,6 +328,8 @@ footer{background:var(--darker);border-top:1px solid var(--border);padding:50px 
 
 /* MOBILE */
 @media(max-width:768px){
+    html,body{overflow-x:hidden;max-width:100vw;}
+    .section,.section-dark{padding:60px 16px;overflow:hidden;}
     .nav-links{display:none;position:absolute;top:60px;left:0;right:0;background:var(--darker);flex-direction:column;padding:24px;gap:16px;border-bottom:1px solid var(--border);}
     .nav-links.open{display:flex;}
     .nav-links a{padding:12px 8px;font-size:14px;}
@@ -367,8 +369,9 @@ footer{background:var(--darker);border-top:1px solid var(--border);padding:50px 
     .rank-col.rank-total{font-size:16px;}
     .rank-col.rank-num{font-size:14px;}
     .rank-col.rank-player{font-size:11px;}
-    .rankings-table{overflow-x:auto;}
-    .stats-tabs{width:100%;}
+    .rankings-table{overflow-x:auto;max-width:100%;}
+    .stats-tabs{width:100%;overflow-x:auto;}
+    .news-grid{grid-template-columns:1fr;}
     .tab-btn{flex:1;padding:10px 12px;font-size:12px;}
     .performers{grid-template-columns:1fr 1fr;}
     .back-to-top{bottom:20px;right:20px;width:50px;height:50px;font-size:20px;}
