@@ -335,6 +335,8 @@ footer{background:var(--darker);border-top:1px solid var(--border);padding:50px 
     .nav-join{display:none;}
     .burger{display:block;}
     .hero-title{font-size:60px;}
+    .hero-logo-bg{display:none;}
+    .hero-glow{width:200px;height:200px;}
     .stats-bar{flex-wrap:wrap;gap:20px;}
     .squad-carousel{grid-template-columns:1fr;}
     .squad-grid{grid-template-columns:1fr;gap:16px;}
