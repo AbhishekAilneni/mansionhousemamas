@@ -421,3 +421,13 @@ footer{background:var(--darker);border-top:1px solid var(--border);padding:50px 
     .fix-teams span{font-size:12px;}
     .fix-teams b{font-size:18px;}
 }
+
+/* SPONSOR */
+.hero-sponsor{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:12px;margin-bottom:32px;}
+.hero-sponsor span{font-size:11px;color:#666;letter-spacing:1px;text-transform:uppercase;}
+.sponsor-logo-hero{height:28px;border-radius:4px;opacity:0.85;transition:opacity .2s;}
+.sponsor-logo-hero:hover{opacity:1;}
+.foot-sponsor{display:flex;align-items:center;justify-content:center;gap:12px;padding:20px 0;border-top:1px solid var(--border);max-width:1100px;margin:0 auto;}
+.foot-sponsor span{font-size:10px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;}
+.sponsor-logo-footer{height:36px;border-radius:6px;opacity:0.9;transition:opacity .2s;}
+.sponsor-logo-footer:hover{opacity:1;}
