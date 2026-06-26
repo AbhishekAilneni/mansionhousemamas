@@ -1,0 +1,43 @@
+{
+  "ccc": {
+    "name": "CCC Spring 2026",
+    "format": "15 overs",
+    "status": "completed",
+    "captain": "Ashok Kumar Attluri",
+    "viceCaptain": "Rohith Aitharaju",
+    "matches": 7,
+    "wins": 3,
+    "losses": 4,
+    "totalRuns": 635,
+    "winRate": 43,
+    "players": [
+      {"name":"Ashok Kumar Attluri","jersey":"01","role":"ALL-ROUNDER","img":"assets/players/Ashok.jpeg","mat":7,"runs":18,"sr":75,"hs":10,"avg":3.6,"wkts":6,"econ":5.33,"catches":2,"ro":0,"dots":0,"fours":0,"sixes":0,"bat":18,"bowl":165,"field":20,"mom":1,"total":253,"badges":["CAPTAIN","#1 RANKED","TOP BOWLER","MOM"]},
+      {"name":"Karan Sagar Vishwanath","jersey":"11","role":"ALL-ROUNDER","img":"assets/players/Karan.jpeg","mat":7,"runs":96,"sr":110,"hs":22,"avg":16.0,"wkts":6,"econ":6.38,"catches":1,"ro":0,"dots":0,"fours":0,"sixes":5,"bat":96,"bowl":140,"field":10,"mom":0,"total":246,"badges":[]},
+      {"name":"Sai Kumar Kesana","jersey":"03","role":"BATTER","img":"assets/players/Sai Kumar Kesana.jpeg","mat":6,"runs":127,"sr":116.51,"hs":45,"avg":25.4,"wkts":0,"econ":0,"catches":2,"ro":0,"dots":0,"fours":6,"sixes":6,"bat":127,"bowl":0,"field":20,"mom":1,"total":197,"badges":["MOM","TOP SCORER","BEST BAT SR","MOST 4's"]},
+      {"name":"Ganesh Jujjuru","jersey":"08","role":"ALL-ROUNDER","img":"assets/players/Ganesh.webp","imgStyle":"object-position:center 70%","mat":6,"runs":34,"sr":92,"hs":17,"avg":5.67,"wkts":4,"econ":8.18,"catches":3,"ro":1,"dots":0,"fours":0,"sixes":0,"bat":34,"bowl":100,"field":40,"mom":0,"total":174,"badges":["TOP FIELDER"]},
+      {"name":"Kiran Chamarthi","jersey":"10","role":"ALL-ROUNDER","img":"assets/players/Kiran.webp","mat":5,"runs":16,"sr":0,"hs":0,"avg":0,"wkts":4,"econ":6.82,"catches":1,"ro":2,"dots":0,"fours":0,"sixes":0,"bat":16,"bowl":115,"field":30,"mom":0,"total":161,"badges":["MOST RUN OUTS"]},
+      {"name":"Kumar Karthik","jersey":"14","role":"BOWLER","img":"assets/players/Kumar Karthik.webp","imgStyle":"object-position:center","mat":6,"runs":1,"sr":0,"hs":0,"avg":0,"wkts":5,"econ":7.15,"catches":2,"ro":0,"dots":43,"fours":0,"sixes":0,"bat":1,"bowl":135,"field":20,"mom":0,"total":156,"badges":["MOST DOT BALLS"]},
+      {"name":"Karthik Sagar","jersey":"04","role":"ALL-ROUNDER","img":"assets/players/Karthik Sagar.jpeg","mat":6,"runs":83,"sr":130.56,"hs":31,"avg":13.83,"wkts":0,"econ":0,"catches":2,"ro":0,"dots":0,"fours":0,"sixes":7,"bat":83,"bowl":0,"field":20,"mom":1,"total":153,"badges":["MOM","MOST 6's"]},
+      {"name":"Bharat Choudhary","jersey":"16","role":"ALL-ROUNDER","img":"assets/players/Bharat.jpeg","mat":3,"runs":1,"sr":0,"hs":0,"avg":0,"wkts":4,"econ":4.83,"catches":1,"ro":0,"dots":0,"fours":0,"sixes":0,"bat":1,"bowl":110,"field":10,"mom":0,"total":121,"badges":["BEST ECONOMY"]},
+      {"name":"Sai Krishna Bobba","jersey":"07","role":"ALL-ROUNDER","img":"assets/players/Sai Krishna Bobba.jpeg","mat":7,"runs":33,"sr":110,"hs":10,"avg":11.0,"wkts":2,"econ":5.0,"catches":1,"ro":0,"dots":0,"fours":0,"sixes":0,"bat":33,"bowl":65,"field":10,"mom":0,"total":108,"badges":["BEST BOWL AVG","BEST BOWL SR"]},
+      {"name":"Abhishek Ailneni","jersey":"06","role":"ALL-ROUNDER","img":"assets/players/Abhishek.jpg","imgStyle":"object-position:center","mat":6,"runs":41,"sr":113,"hs":29,"avg":6.83,"wkts":0,"econ":0,"catches":3,"ro":0,"dots":0,"fours":0,"sixes":0,"bat":41,"bowl":0,"field":35,"mom":0,"total":76,"badges":[]},
+      {"name":"Ajay Reddy Poreddy","jersey":"13","role":"ALL-ROUNDER","img":"assets/players/Ajay.jpg","mat":4,"runs":12,"sr":100,"hs":6,"avg":4.0,"wkts":1,"econ":7.17,"catches":1,"ro":0,"dots":0,"fours":0,"sixes":0,"bat":12,"bowl":40,"field":10,"mom":0,"total":62,"badges":[]},
+      {"name":"Ayush Gupta","jersey":"09","role":"BATTER","img":"assets/players/Ayush.jpeg","mat":4,"runs":29,"sr":100,"hs":18,"avg":7.25,"wkts":0,"econ":0,"catches":3,"ro":0,"dots":0,"fours":0,"sixes":0,"bat":29,"bowl":0,"field":30,"mom":0,"total":59,"badges":[]},
+      {"name":"Piyush Bhardwaj","jersey":"12","role":"BATTER","img":"assets/players/Piyush.jpeg","mat":4,"runs":23,"sr":64,"hs":15,"avg":5.75,"wkts":0,"econ":0,"catches":3,"ro":0,"dots":0,"fours":0,"sixes":0,"bat":23,"bowl":0,"field":30,"mom":0,"total":53,"badges":[]},
+      {"name":"Mahesh M","jersey":"05","role":"BATTER","img":"","mat":2,"runs":45,"sr":107,"hs":45,"avg":22.5,"wkts":0,"econ":0,"catches":0,"ro":0,"dots":0,"fours":0,"sixes":3,"bat":45,"bowl":0,"field":0,"mom":0,"total":45,"badges":[]},
+      {"name":"Rohith Aitharaju","jersey":"02","role":"ALL-ROUNDER","img":"assets/players/Rohith.jpeg","imgStyle":"object-position:center","mat":3,"runs":10,"sr":109,"hs":12,"avg":5.0,"wkts":1,"econ":10.33,"catches":0,"ro":0,"dots":0,"fours":0,"sixes":0,"bat":10,"bowl":10,"field":0,"mom":0,"total":20,"badges":["VICE CAPTAIN"]},
+      {"name":"Aravind Gampa","jersey":"17","role":"BATTER","img":"assets/players/Aravind.webp","imgStyle":"object-position:center","mat":1,"runs":0,"sr":0,"hs":0,"avg":0,"wkts":0,"econ":0,"catches":2,"ro":0,"dots":0,"fours":0,"sixes":0,"bat":0,"bowl":0,"field":20,"mom":0,"total":20,"badges":[]},
+      {"name":"Rajiv Mallojjala","jersey":"18","role":"BATTER","img":"assets/players/Rajiv.jpeg","mat":2,"runs":0,"sr":0,"hs":0,"avg":0,"wkts":0,"econ":0,"catches":0,"ro":0,"dots":0,"fours":0,"sixes":0,"bat":0,"bowl":0,"field":0,"mom":0,"total":0,"badges":[]},
+      {"name":"Ashwin Kumar Boinala","jersey":"15","role":"BOWLER","img":"assets/players/Ashwin.jpeg","mat":3,"runs":1,"sr":0,"hs":0,"avg":0,"wkts":0,"econ":14.67,"catches":0,"ro":0,"dots":0,"fours":0,"sixes":0,"bat":1,"bowl":-15,"field":0,"mom":0,"total":-14,"badges":[]}
+    ],
+    "fixtures": [
+      {"type":"QF","result":"loss","home":"CAROLINA SUPER KINGS","homeScore":"167/3","away":"MH MAMAS","awayScore":"65/8","meta":"JUN 2026 • Lost by 102 Runs • Quarter Final • 15 overs"},
+      {"type":"league","result":"loss","home":"MH MAMAS","homeScore":"63/10","away":"AUBURN SPARTANS","awayScore":"64/5","meta":"JUN 6, 2026 • Lost by 5 Wickets • Chased in 11.1 overs"},
+      {"type":"league","result":"win","home":"MH MAMAS","homeScore":"122/5","away":"EVEREST COMMUNITY CLUB","awayScore":"83/8","meta":"MAY 16, 2026 • Won by 39 Runs • 15 overs"},
+      {"type":"league","result":"loss","home":"MH MAMAS","homeScore":"101/8","away":"NC TROJANS","awayScore":"102/6","meta":"APR 19, 2026 • Lost by 4 Wickets • 15 overs"},
+      {"type":"league","result":"win","home":"HIMALAYAN HAWKS","homeScore":"114/4","away":"MH MAMAS","awayScore":"116/4","meta":"APR 12, 2026 • Won by 6 Wickets • Chased in 13.3 overs"},
+      {"type":"league","result":"win","home":"MH MAMAS","homeScore":"72/6","away":"COMILLA VICTORIANS","awayScore":"71/10","meta":"APR 4, 2026 • Won by 1 Run • Thriller!"},
+      {"type":"league","result":"loss","home":"MH MAMAS","homeScore":"96/10","away":"WOLF GANG","awayScore":"97/2","meta":"MAR 29, 2026 • Lost by 8 Wickets • 15 overs"}
+    ]
+  }
+}
