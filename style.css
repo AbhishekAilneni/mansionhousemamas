@@ -394,9 +394,18 @@ footer{background:var(--darker);border-top:1px solid var(--border);padding:50px 
 
 /* LEAGUE TOGGLE */
 .league-toggle{display:flex;justify-content:center;gap:8px;padding:16px 24px;background:var(--darker);border-bottom:1px solid var(--border);position:sticky;top:60px;z-index:998;}
-.league-btn{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:10px 24px;border-radius:6px;font-weight:600;font-size:12px;cursor:pointer;transition:all .2s;letter-spacing:1px;text-transform:uppercase;}
+.league-dropdown{position:relative;}
+.league-btn{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:10px 24px;border-radius:6px;font-weight:600;font-size:12px;cursor:pointer;transition:all .2s;letter-spacing:1px;text-transform:uppercase;display:flex;align-items:center;gap:6px;}
 .league-btn.active{background:var(--fire);color:#000;border-color:var(--fire);}
 .league-btn:hover:not(.active){color:var(--text);border-color:#333;}
+.league-season{font-weight:400;opacity:0.8;}
+.league-arrow{font-size:9px;opacity:0.7;transition:transform .2s;}
+.league-dropdown.open .league-arrow{transform:rotate(180deg);}
+.league-menu{position:absolute;top:calc(100% + 6px);left:0;right:0;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:6px;display:none;min-width:160px;box-shadow:0 8px 24px rgba(0,0,0,0.5);z-index:999;}
+.league-dropdown.open .league-menu{display:block;}
+.league-option{display:block;padding:8px 14px;color:var(--muted);text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.5px;border-radius:4px;transition:all .2s;}
+.league-option:hover{background:rgba(255,107,0,0.1);color:var(--text);}
+.league-option.active{color:var(--fire);}
 
 /* LEAGUE CONTENT CONTAINERS */
 .league-content{animation:fadeIn .3s ease;}
@@ -410,7 +419,8 @@ footer{background:var(--darker);border-top:1px solid var(--border);padding:50px 
 
 @media(max-width:768px){
     .league-toggle{flex-direction:row;gap:6px;padding:12px 16px;top:58px;}
-    .league-btn{padding:10px 16px;font-size:11px;}
+    .league-btn{padding:10px 14px;font-size:10px;}
+    .league-menu{min-width:130px;}
     .squad-placeholder{padding:40px 16px;}
     .sc-badges{grid-template-columns:auto;}
     .streak-chart{flex-wrap:wrap;gap:8px;}

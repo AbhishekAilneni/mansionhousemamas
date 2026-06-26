@@ -69,8 +69,19 @@
 
     <!-- LEAGUE TOGGLE -->
     <div class="league-toggle">
-        <button class="league-btn active" data-league="ccc">CCC Spring 2026</button>
-        <button class="league-btn" data-league="apl">Apex Premier League</button>
+        <div class="league-dropdown">
+            <button class="league-btn active" data-league="ccc-spring-2026">CCC <span class="league-season">Spring 2026</span> <span class="league-arrow">▼</span></button>
+            <div class="league-menu">
+                <a href="#" data-league="ccc-summer-2026" class="league-option">Summer 2026</a>
+                <a href="#" data-league="ccc-spring-2026" class="league-option active">Spring 2026</a>
+            </div>
+        </div>
+        <div class="league-dropdown">
+            <button class="league-btn" data-league="apl-fall-2025">APL <span class="league-season">Fall 2025</span> <span class="league-arrow">▼</span></button>
+            <div class="league-menu">
+                <a href="#" data-league="apl-fall-2025" class="league-option active">Fall 2025</a>
+            </div>
+        </div>
     </div>
 
     <!-- STATS BAR -->
@@ -1655,8 +1666,9 @@
 
     function openPlayerModal(name){
         // Check which league is active
-        const activeLeague = document.querySelector('.league-btn.active');
-        const league = activeLeague ? activeLeague.dataset.league : 'ccc';
+        const activeLeague = document.querySelector('.league-dropdown .league-btn.active');
+        const leagueKey = activeLeague ? activeLeague.dataset.league : 'ccc-spring-2026';
+        const league = leagueKey.startsWith('apl') ? 'apl' : 'ccc';
         const data = league === 'apl' ? aplPlayerData : playerData;
         const p = data[name];
         if(!p) return;
@@ -1669,6 +1681,7 @@
         document.getElementById('pmStats').innerHTML = statsHtml;
         document.getElementById('pmOverview').innerHTML = '<h3>PLAYER OVERVIEW</h3><p>'+p.overview+'</p>';
         // Update season label
+        const seasonLabel = leagueKey.replace(/-/g, ' ').replace(/ccc/i,'CCC').replace(/apl/i,'APL').toUpperCase();
         document.querySelector('.pm-season').textContent = league === 'apl' ? 'APL Fall 2025' : 'CCC Spring 2026';
         document.querySelector('.pm-impact-title').textContent = league === 'apl' ? 'APL IMPACT' : 'CCC IMPACT';
         document.getElementById('playerModal').classList.add('active');
@@ -1680,59 +1693,111 @@
         document.body.style.overflow = '';
     }
 
-    // LEAGUE TOGGLE
-    const leagueBtns = document.querySelectorAll('.league-btn');
-    leagueBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const league = btn.dataset.league;
-            // Update active button
-            leagueBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            // Show/hide stats bars
-            document.querySelectorAll('.stats-bar[data-league]').forEach(el => {
-                el.style.display = el.dataset.league === league ? 'flex' : 'none';
-            });
-            // Show/hide squad grids
-            document.querySelectorAll('.squad-grid[data-league]').forEach(el => {
-                el.style.display = el.dataset.league === league ? 'grid' : 'none';
-            });
-            // Show/hide league sub-headings
-            document.querySelectorAll('.league-sub[data-league]').forEach(el => {
-                el.style.display = el.dataset.league === league ? 'block' : 'none';
-            });
-            // Show/hide league content blocks (fixtures, rankings, timeline, charts, etc.)
-            document.querySelectorAll('.league-content[data-league]').forEach(el => {
-                el.style.display = el.dataset.league === league ? '' : 'none';
-            });
-            // Show/hide grid-based league elements (video, news, milestones)
-            document.querySelectorAll('.video-grid[data-league],.news-grid[data-league],.mile-grid[data-league]').forEach(el => {
-                el.style.display = el.dataset.league === league ? 'grid' : 'none';
-            });
-            // Re-trigger animations for newly visible elements
-            setTimeout(() => {
-                document.querySelectorAll('.sbar,.squad-card,.player,.fix,.mile,.perf,.news-card,.rank-row:not(.hidden-rank),.tl-item').forEach(e => {
-                    if(e.offsetParent !== null && !e.classList.contains('show')) {
-                        o.observe(e);
-                    }
-                });
-                // Re-trigger stat bar counters
-                const activeBar = document.querySelector('.stats-bar[data-league="'+league+'"]');
-                if(activeBar) {
-                    activeBar.querySelectorAll('[data-count]').forEach(span => {
-                        const target = parseInt(span.dataset.count);
-                        const suffix = span.closest('.accent') ? '%' : '';
-                        let current = 0;
-                        const step = Math.max(1, Math.floor(target / 40));
-                        const timer = setInterval(() => {
-                            current += step;
-                            if(current >= target){current = target; clearInterval(timer);}
-                            span.textContent = current + suffix;
-                        }, 30);
-                    });
-                }
-            }, 50);
+    // LEAGUE TOGGLE WITH DROPDOWNS
+    const leagueMap = {
+        'ccc-spring-2026': 'ccc',
+        'ccc-summer-2026': 'ccc-summer',
+        'apl-fall-2025': 'apl'
+    };
+
+    // Toggle dropdown menus
+    document.querySelectorAll('.league-dropdown .league-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const dropdown = btn.closest('.league-dropdown');
+            const wasOpen = dropdown.classList.contains('open');
+            // Close all dropdowns
+            document.querySelectorAll('.league-dropdown').forEach(d => d.classList.remove('open'));
+            // Toggle this one
+            if(!wasOpen) dropdown.classList.add('open');
+
+            // If clicking the tab itself (not just dropdown), switch to that league
+            const league = leagueMap[btn.dataset.league];
+            if(league) switchLeague(league, btn);
         });
     });
+
+    // Dropdown option selection
+    document.querySelectorAll('.league-option').forEach(opt => {
+        opt.addEventListener('click', (e) => {
+            e.preventDefault();
+            const leagueKey = opt.dataset.league;
+            const league = leagueMap[leagueKey];
+            const dropdown = opt.closest('.league-dropdown');
+            const btn = dropdown.querySelector('.league-btn');
+
+            // Update button text
+            const seasonText = opt.textContent.trim();
+            btn.querySelector('.league-season').textContent = seasonText;
+            btn.dataset.league = leagueKey;
+
+            // Update active option
+            dropdown.querySelectorAll('.league-option').forEach(o => o.classList.remove('active'));
+            opt.classList.add('active');
+
+            // Close dropdown
+            dropdown.classList.remove('open');
+
+            // Switch league
+            if(league) switchLeague(league, btn);
+        });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+        if(!e.target.closest('.league-dropdown')) {
+            document.querySelectorAll('.league-dropdown').forEach(d => d.classList.remove('open'));
+        }
+    });
+
+    function switchLeague(league, activeBtn) {
+        // Update active button styles
+        document.querySelectorAll('.league-dropdown .league-btn').forEach(b => b.classList.remove('active'));
+        activeBtn.classList.add('active');
+
+        // Show/hide stats bars
+        document.querySelectorAll('.stats-bar[data-league]').forEach(el => {
+            el.style.display = el.dataset.league === league ? 'flex' : 'none';
+        });
+        // Show/hide squad grids
+        document.querySelectorAll('.squad-grid[data-league]').forEach(el => {
+            el.style.display = el.dataset.league === league ? 'grid' : 'none';
+        });
+        // Show/hide league sub-headings
+        document.querySelectorAll('.league-sub[data-league]').forEach(el => {
+            el.style.display = el.dataset.league === league ? 'block' : 'none';
+        });
+        // Show/hide league content blocks
+        document.querySelectorAll('.league-content[data-league]').forEach(el => {
+            el.style.display = el.dataset.league === league ? '' : 'none';
+        });
+        // Show/hide grid-based league elements
+        document.querySelectorAll('.video-grid[data-league],.news-grid[data-league],.mile-grid[data-league]').forEach(el => {
+            el.style.display = el.dataset.league === league ? 'grid' : 'none';
+        });
+        // Re-trigger animations
+        setTimeout(() => {
+            document.querySelectorAll('.sbar,.squad-card,.player,.fix,.mile,.perf,.news-card,.rank-row:not(.hidden-rank),.tl-item').forEach(e => {
+                if(e.offsetParent !== null && !e.classList.contains('show')) {
+                    o.observe(e);
+                }
+            });
+            // Re-trigger stat bar counters
+            const activeBar = document.querySelector('.stats-bar[data-league="'+league+'"]');
+            if(activeBar) {
+                activeBar.querySelectorAll('[data-count]').forEach(span => {
+                    const target = parseInt(span.dataset.count);
+                    const suffix = span.closest('.accent') ? '%' : '';
+                    let current = 0;
+                    const step = Math.max(1, Math.floor(target / 40));
+                    const timer = setInterval(() => {
+                        current += step;
+                        if(current >= target){current = target; clearInterval(timer);}
+                        span.textContent = current + suffix;
+                    }, 30);
+                });
+            }
+        }, 50);
+    }
     </script>
 </body>
 </html>
