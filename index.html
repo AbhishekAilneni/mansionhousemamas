@@ -70,18 +70,13 @@
     <!-- LEAGUE TOGGLE -->
     <div class="league-toggle">
         <div class="league-dropdown">
-            <button class="league-btn active" data-league="ccc-spring-2026">CCC <span class="league-season">Spring 2026</span> <span class="league-arrow">▼</span></button>
+            <button class="league-btn active" data-league="ccc-summer-2026">CCC <span class="league-season">Summer 2026</span> <span class="league-arrow">▼</span></button>
             <div class="league-menu">
-                <a href="#" data-league="ccc-summer-2026" class="league-option">Summer 2026</a>
-                <a href="#" data-league="ccc-spring-2026" class="league-option active">Spring 2026</a>
+                <a href="#" data-league="ccc-summer-2026" class="league-option active">Summer 2026</a>
+                <a href="#" data-league="ccc-spring-2026" class="league-option">Spring 2026</a>
             </div>
         </div>
-        <div class="league-dropdown">
-            <button class="league-btn" data-league="apl-fall-2025">APL <span class="league-season">Fall 2025</span> <span class="league-arrow">▼</span></button>
-            <div class="league-menu">
-                <a href="#" data-league="apl-fall-2025" class="league-option active">Fall 2025</a>
-            </div>
-        </div>
+        <button class="league-btn" data-league="apl-fall-2025">Apex Premier League</button>
     </div>
 
     <!-- STATS BAR -->
@@ -1666,8 +1661,8 @@
 
     function openPlayerModal(name){
         // Check which league is active
-        const activeLeague = document.querySelector('.league-dropdown .league-btn.active');
-        const leagueKey = activeLeague ? activeLeague.dataset.league : 'ccc-spring-2026';
+        const activeLeague = document.querySelector('.league-toggle .league-btn.active');
+        const leagueKey = activeLeague ? activeLeague.dataset.league : 'ccc-summer-2026';
         const league = leagueKey.startsWith('apl') ? 'apl' : 'ccc';
         const data = league === 'apl' ? aplPlayerData : playerData;
         const p = data[name];
@@ -1696,11 +1691,11 @@
     // LEAGUE TOGGLE WITH DROPDOWNS
     const leagueMap = {
         'ccc-spring-2026': 'ccc',
-        'ccc-summer-2026': 'ccc-summer',
+        'ccc-summer-2026': 'ccc',
         'apl-fall-2025': 'apl'
     };
 
-    // Toggle dropdown menus
+    // Toggle dropdown menus (only for elements inside .league-dropdown)
     document.querySelectorAll('.league-dropdown .league-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const dropdown = btn.closest('.league-dropdown');
@@ -1710,7 +1705,15 @@
             // Toggle this one
             if(!wasOpen) dropdown.classList.add('open');
 
-            // If clicking the tab itself (not just dropdown), switch to that league
+            // Switch to that league
+            const league = leagueMap[btn.dataset.league];
+            if(league) switchLeague(league, btn);
+        });
+    });
+
+    // Plain APL button (no dropdown)
+    document.querySelectorAll('.league-toggle > .league-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
             const league = leagueMap[btn.dataset.league];
             if(league) switchLeague(league, btn);
         });
@@ -1751,7 +1754,7 @@
 
     function switchLeague(league, activeBtn) {
         // Update active button styles
-        document.querySelectorAll('.league-dropdown .league-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.league-toggle .league-btn').forEach(b => b.classList.remove('active'));
         activeBtn.classList.add('active');
 
         // Show/hide stats bars
