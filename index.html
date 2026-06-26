@@ -1784,6 +1784,7 @@
     // Toggle dropdown menus (only for elements inside .league-dropdown)
     document.querySelectorAll('.league-dropdown .league-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
+            e.stopPropagation();
             const dropdown = btn.closest('.league-dropdown');
             const wasOpen = dropdown.classList.contains('open');
             // Close all dropdowns
@@ -1809,6 +1810,7 @@
     document.querySelectorAll('.league-option').forEach(opt => {
         opt.addEventListener('click', (e) => {
             e.preventDefault();
+            e.stopPropagation();
             const leagueKey = opt.dataset.league;
             const league = leagueMap[leagueKey];
             const dropdown = opt.closest('.league-dropdown');

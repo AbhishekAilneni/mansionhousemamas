@@ -403,9 +403,11 @@ footer{background:var(--darker);border-top:1px solid var(--border);padding:50px 
 .league-dropdown.open .league-arrow{transform:rotate(180deg);}
 .league-menu{position:absolute;top:calc(100% + 6px);left:0;right:0;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:6px;display:none;min-width:160px;box-shadow:0 8px 24px rgba(0,0,0,0.5);z-index:999;}
 .league-dropdown.open .league-menu{display:block;}
-.league-option{display:block;padding:8px 14px;color:var(--muted);text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.5px;border-radius:4px;transition:all .2s;}
+.league-option{display:block;padding:8px 14px;color:var(--muted);text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.5px;border-radius:4px;transition:all .2s;cursor:pointer;}
 .league-option:hover{background:rgba(255,107,0,0.1);color:var(--text);}
+.league-option:visited{color:var(--muted);}
 .league-option.active{color:var(--fire);}
+.league-option.active:visited{color:var(--fire);}
 
 /* LEAGUE CONTENT CONTAINERS */
 .league-content{animation:fadeIn .3s ease;}
